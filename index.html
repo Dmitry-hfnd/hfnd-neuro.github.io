@@ -5,148 +5,41 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>HFND Technologies | High-Frequency Neural Drive</title>
  <style>
- :root {
- --bg: #0a0a0a;
- --text: #f5f5f7;
- --accent: #2997ff;
- --gray: #86868b;
- --card-bg: #121212;
- }
- body {
- font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
- background-color: var(--bg);
- color: var(--text);
- margin: 0;
- padding: 0;
- line-height: 1.5;
- -webkit-font-smoothing: antialiased;
- }
- .container {
- max-width: 800px;
- margin: 0 auto;
- padding: 40px 20px;
- }
- header {
- padding: 60px 0 40px 0;
- border-bottom: 1px solid #222;
- }
- h1 {
- font-size: 48px;
- font-weight: 700;
- letter-spacing: -0.5px;
- margin: 0 0 10px 0;
- color: var(--text);
- }
- .subtitle {
- font-size: 21px;
- color: var(--accent);
- font-weight: 400;
- margin: 0 0 20px 0;
- }
- .tagline {
- font-size: 17px;
- color: var(--gray);
- max-width: 600px;
- margin: 0;
- }
- section {
- padding: 40px 0;
- border-bottom: 1px solid #222;
- }
- h2 {
- font-size: 24px;
- font-weight: 600;
- margin: 0 0 20px 0;
- letter-spacing: -0.3px;
- }
- ul {
- list-style: none;
- padding: 0;
- margin: 0;
- }
- li {
- margin-bottom: 15px;
- font-size: 16px;
- color: #e8e8ed;
- }
- strong {
- color: var(--text);
- font-weight: 600;
- }
- .accordion {
- margin-bottom: 15px;
- background: var(--card-bg);
- border: 1px solid #222;
- border-radius: 8px;
- overflow: hidden;
- }
- .accordion-title {
- width: 100%;
- background: none;
- border: none;
- color: var(--text);
- text-align: left;
- padding: 18px 20px;
- font-size: 17px;
- font-weight: 600;
- cursor: pointer;
- display: flex;
- justify-content: space-between;
- align-items: center;
- }
- .accordion-title:hover {
- background: #1a1a1a;
- }
- .accordion-title::after {
- content: '+';
- color: var(--accent);
- font-size: 20px;
- }
- .accordion[open] .accordion-title::after {
- content: '−';
- }
- .accordion-content {
- padding: 0 20px 20px 20px;
- color: #e8e8ed;
- font-size: 15px;
- border-top: 1px solid #1a1a1a;
- padding-top: 15px;
- }
- .btn {
- display: inline-block;
- background-color: var(--accent);
- color: #fff;
- text-decoration: none;
- padding: 12px 24px;
- border-radius: 8px;
- font-weight: 500;
- font-size: 15px;
- margin-top: 10px;
- }
- footer {
- padding: 40px 0;
- color: var(--gray);
- font-size: 14px;
- }
- .footer-grid {
- display: flex;
- justify-content: space-between;
- align-items: center;
- }
- @media (max-width: 600px) {
- h1 { font-size: 36px; }
- .subtitle { font-size: 19px; }
- .footer-grid { flex-direction: column; align-items: flex-start; gap: 15px; }
- }
+ :root { --bg: #0a0a0a; --text: #f5f5f7; --accent: #2997ff; --gray: #86868b; --card-bg: #121212; }
+ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+ .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+ header { padding: 60px 0 40px 0; border-bottom: 1px solid #222; }
+ h1 { font-size: 48px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px 0; }
+ .subtitle { font-size: 21px; color: var(--accent); margin: 0 0 20px 0; }
+ .tagline { font-size: 17px; color: var(--gray); max-width: 600px; margin: 0; }
+ section { padding: 30px 0; border-bottom: 1px solid #222; }
+ h2 { font-size: 24px; font-weight: 600; margin: 0 0 20px 0; }
+ ul { list-style: none; padding: 0; margin: 0; }
+ li { margin-bottom: 15px; font-size: 16px; color: #e8e8ed; }
+ strong { color: var(--text); font-weight: 600; }
+ .science-intro { font-size: 16px; color: #e8e8ed; margin-bottom: 25px; }
+ .accordion { margin-bottom: 10px; background: var(--card-bg); border: 1px solid #222; border-radius: 8px; overflow: hidden; }
+ .accordion-title { width: 100%; background: none; border: none; color: var(--text); text-align: left; padding: 12px 20px; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+ .accordion-title:hover { background: #1a1a1a; }
+ .accordion-title::after { content: '+'; color: var(--accent); font-size: 18px; }
+ .accordion[open] .accordion-title::after { content: '−'; }
+ .accordion-content { padding: 0 20px 12px 20px; color: #e8e8ed; font-size: 14.5px; border-top: 1px solid #1a1a1a; padding-top: 10px; }
+ .accordion-content p { margin: 0 0 8px 0; }
+ .accordion-content p:last-child { margin: 0; }
+ .btn { display: inline-block; background-color: var(--accent); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 500; font-size: 15px; margin-top: 10px; }
+ footer { padding: 40px 0; color: var(--gray); font-size: 14px; }
+ .footer-grid { display: flex; justify-content: space-between; align-items: center; }
+ @media (max-width: 600px) { h1 { font-size: 36px; } .subtitle { font-size: 19px; } .footer-grid { flex-direction: column; align-items: flex-start; gap: 15px; } }
  </style>
 </head>
 <body>
- <div class="container">
+<div class="container">
  <header>
  <h1>HFND Technologies</h1>
  <div class="subtitle">High-Frequency Neural Drive Core Platform</div>
  <p class="tagline">We design hardware-agnostic bio-interfaces operating at the 400–1000 Hz spectrum to reverse age-related neuromuscular degradation, preserve Type II muscle fibers, and eliminate fall risks.</p>
  </header>
+
  <section>
  <h2>Empirical Case Data (Age 63)</h2>
  <ul>
@@ -157,8 +50,11 @@
  </ul>
  <a href="https://linktr.ee" class="btn" target="_blank">View Live Video Benchmarks</a>
  </section>
+
  <section>
  <h2>The Biophysical Framework</h2>
+ <p class="science-intro">HFND Technologies introduces a core paradigm shift in bio-gerontology and aerospace medicine: moving away from resource-heavy chemical-nutrient fueling toward highly efficient, frequency-driven electrical regulation of the central nervous system matrix.</p>
+ 
  <details class="accordion">
  <summary class="accordion-title">1. The Synaptic Bottleneck & "Neuro-Quantum Lag"</summary>
  <div class="accordion-content">
@@ -166,6 +62,7 @@
  <p>In response to this noise, the CNS triggers Central Inhibition (The Central Governor Model), acting as an automated safety cutoff. This cutoff systematically blocks high-frequency currents to peripheral tissues, mechanically causing age-related anabolic resistance, loss of tendinous viscoelasticity, and severe sarcopenia.</p>
  </div>
  </details>
+
  <details class="accordion">
  <summary class="accordion-title">2. Bypassing Axonal Limits via Population Phase-Locking</summary>
  <div class="accordion-content">
@@ -173,13 +70,15 @@
  <p>By orchestrating a coherent, phased-array firing matrix across cerebellar Purkinje cell fields, the efferent motor command achieves an aggregate operational bandwidth within the 400–1000 Hz spectrum down the vestibulo-spinal tract. This population Phase-Locking suppresses background sympathetic noise and allows instant sensory recalibration (The AVSS Sub-1s Reset Algorithm).</p>
  </div>
  </details>
+
  <details class="accordion">
  <summary class="accordion-title">3. Descending Bio-Axial Calibration & Visual Gating</summary>
  <div class="accordion-content">
  <p>During acute vestibular chaos (e.g., rapid physical rotations), the fluid inertia of the endolymph in the semicircular canals typically triggers vegetative panic and motor failure. The AVSS protocol overrides this through Descending Bio-Axial Calibration.</p>
-  <p>Isometric axial locking fully saturates the high-density muscle spindle arrays (>100 spindles/gram) in the deep cervical paraspinal muscles, gating out vestibular noise via reciprocal inhibition. The CNS establishes an instantaneous Visual Anchor, prioritizing coherent spatial-temporal visual mapping over conflicting inner-ear fluid data, completely bypassing standard autonomic delay.</p>
+ <p>Isometric axial locking fully saturates the high-density muscle spindle arrays (>100 spindles/gram) in the deep cervical paraspinal muscles, gating out vestibular noise via reciprocal inhibition. The CNS establishes an instantaneous Visual Anchor, prioritizing coherent spatial-temporal visual mapping over conflicting inner-ear fluid data, completely bypassing standard autonomic delay.</p>
  </div>
  </details>
+
  <details class="accordion">
  <summary class="accordion-title">4. Neurogenic mTORC1 Activation & Autophagy Leverage</summary>
  <div class="accordion-content">
@@ -189,9 +88,9 @@
  <p><strong>Tendon Viscoelastic Resonance:</strong> The 400–1000 Hz central drive acts as a high-frequency acoustic stimulator on tenocytes, utilizing collagen piezoelectricity to maintain tendon-matrix stiffness and reverse age-related structural degradation.</p>
  </div>
  </details>
+
  <details class="accordion">
  <summary class="accordion-title">5. The Unifying Theory: 400–1000 Hz Core Bio-Resonance Matrix</summary>
  <div class="accordion-content">
  <p>The closing of the biological loop is achieved when the 400–1000 Hz spectrum stops acting as an isolated signal and becomes a systemic, structural Bio-Resonance Matrix. This practical-tested hypothesis links multi-directional biological vectors into a single operational state:</p>
  <p><strong>The Tendon-Bone Piezoelectric Resonator:</strong> High-density micro-vibrations at this ultra-high spectrum act as mechanical soundwaves traveling through the kinetic chain. The crystalline hydroxyapatite in bones and collagen fibers in tendons respond through the direct Wolff's Law Piezoelectric Effect. This mechanical stress produces localized micro-electrical fields, preserving bone density and tendon viscoelasticity, completely halting age-related mineral leakage without high nutritional dependency.</p>
- <p><strong>The Visual Anchor & Motor Cross-Transfer:</strong> The 400–1000 Hz signal down the vestibulo-spinal tract acts as a central neuro-gate that instantly filters out physical chaos from the inner ear's endolymph. By overriding vestibular panic, the CNS can orchestrate the complex Asynchronous Cross-Transfer of motor commands between the left and right hemispheres (exemplified by the rapid transition from a balanced 3-ball pattern to high-frequency, alternating 2-balls-in-1-hand fountain routines immediately following rotation-induced overload).</p>
