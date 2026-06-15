@@ -43,11 +43,33 @@
         .accordion-content p { margin: 0 0 12px 0; }
         .accordion-content p:last-child { margin: 0; }
         
+        /* СТИЛИ ДЛЯ АДАПТИВНОЙ ВЕКТОРНОЙ СХЕМЫ HFND */
+        .loop-container { margin: 30px 0 40px 0; padding: 25px; background: var(--card-bg); border: 1px solid #222; border-radius: 12px; }
+        .loop-title { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text); margin-bottom: 25px; text-align: center; border-bottom: 1px solid #222; padding-bottom: 15px; }
+        .loop-flow { display: flex; flex-direction: column; gap: 20px; position: relative; }
+        .loop-row { display: flex; justify-content: space-between; align-items: stretch; gap: 15px; }
+        .loop-box { flex: 1; padding: 15px; border-radius: 8px; font-size: 13px; font-weight: 500; display: flex; flex-direction: column; justify-content: center; border: 1px solid transparent; }
+        .loop-box span { font-size: 11px; font-weight: 400; color: var(--gray); margin-top: 5px; line-height: 1.4; }
+        .box-hw { background: rgba(0, 172, 193, 0.05); border-color: #00acc1; color: #00acc1; }
+        .box-ext { background: rgba(41, 151, 255, 0.05); border-color: var(--accent); color: var(--accent); }
+        .box-int { background: rgba(251, 140, 0, 0.05); border-color: #fb8000; color: #fb8c00; }
+        .box-barrier { background: rgba(229, 57, 53, 0.05); border-color: #e53935; color: #e53935; }
+        .box-output { background: rgba(67, 160, 71, 0.08); border-color: #43a047; color: #43a047; border-width: 2px; }
+        .loop-divider { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--gray); margin: 15px 0 5px 0; padding-left: 5px; border-left: 2px solid #333; }
+        .arrow-v { display: none; text-align: center; color: #333; font-size: 18px; margin: -5px 0; }
+        
         .btn { display: inline-block; background-color: var(--accent); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 500; font-size: 15px; margin-top: 10px; transition: opacity 0.2s; }
         .btn:hover { opacity: 0.9; }
-        footer { padding: 40px 0; color: var(--gray); font-size: 14px; }
+        footer { padding: 40px 0; color: var(--gray); font-size: 14px; border-top: 1px solid #222; margin-top: 40px; }
         .footer-grid { display: flex; justify-content: space-between; align-items: center; }
-        @media (max-width: 600px) { h1 { font-size: 36px; } .subtitle { font-size: 19px; } .footer-grid { flex-direction: column; align-items: flex-start; gap: 15px; } }
+        @media (max-width: 768px) { 
+            h1 { font-size: 36px; } 
+            .subtitle { font-size: 19px; } 
+            .footer-grid { flex-direction: column; align-items: flex-start; gap: 15px; } 
+            .loop-row { flex-direction: column; gap: 10px; }
+            .arrow-v { display: block; }
+            .loop-divider { margin-top: 25px; }
+        }
     </style>
 </head>
 <body>
@@ -66,85 +88,69 @@
          <li><strong>Sensory Gating Reset:</strong> Sub-1 second central suppression of post-rotational vestibular nystagmus (AVSS algorithm), enabling instant transition to isolated, asynchronous 2-balls-in-1-hand fountain juggling.</li>
          <li><strong>Mitochondrial Protection:</strong> Continuous 3-year electrochemical shield using GlyNAC + Alpha-Lipoic Acid (ALA) to sustain optimal myocyte resting membrane potential (&approx; -90 mV).</li>
      </ul>
-     <a href="https://linktr.ee/Independent.Researcher" class="btn" target="_blank">View Live Video Benchmarks</a>
+     <a href="https://linktr.ee" class="btn" target="_blank">View Live Video Benchmarks</a>
  </section>
 
- <!-- НОВЫЙ БРОНЕБОЙНЫЙ НАУЧНЫЙ БЛОК -->
  <section>
      <h2>The Biophysical Framework</h2>
      <p class="science-intro">HFND Technologies introduces a core shift from resource-heavy chemical fueling to efficient, instantaneous frequency-driven regulation of the central nervous system matrix.</p>
      
-     <details class="accordion">
-         <summary class="accordion-title">1. The Synaptic Bottleneck: "Neuro-Quantum Lag"</summary>
-         <div class="accordion-content">
-             <p>As the organism ages, ultrastructural desynchronization occurs at the neuromuscular junction, affecting vesicle-docking proteins and calcium-channel latency. This micro-delay generates a <strong>"Neuro-Quantum Lag"</strong>, filling the loop with destructive synaptic noise.</p>
-             <p>The central nervous system loses its multi-axial motor gating capabilities and triggers <strong>Central Inhibition (The Central Governor Model)</strong>. This safety cutoff blocks high-frequency currents to peripheral muscles, causing age-related anabolic resistance and muscle decay.</p>
+     <!-- INTEGRATION OF THE HFND CYBERNETIC LOOP SPECIFICATION -->
+     <div class="loop-container">
+       <div class="loop-title">HFND End-to-End Cybernetic Loop Specification (Hardware ──> Cellular Core)</div>
+       <div class="loop-flow">
+         
+         <div class="loop-divider">External & Hardware Control Layers</div>
+         <div class="loop-row">
+           <div class="loop-box box-hw">
+             1. AVSS Hardware Platform
+             <span>Wearable Cybernetic Devices: Daily Vest Core or Active Band form factors embedded with 24-bit ADCs and FIFO buffers.</span>
+           </div>
+           <div class="arrow-v">&darr;</div>
+           <div class="loop-box box-ext">
+             2. Vestibular Stochastic Resonance
+             <span>Sub-threshold white noise propagation via axonal interface at 120 m/s to force-synchronize afferent systems.</span>
+           </div>
+           <div class="arrow-v">&darr;</div>
+           <div class="loop-box box-ext">
+             3. Collective Purkinje Cells
+             <span>Phase-locking summation inside the cerebellar cortex triggering coherent 400–1000 Hz efferent spike generation.</span>
+           </div>
          </div>
-     </details>
 
-     <details class="accordion">
-         <summary class="accordion-title">2. Bypassing Axonal Limits via Population Phase-Locking</summary>
-         <div class="accordion-content">
-             <p>The absolute refractory period limits standard single-axon action potential generation to under 150 Hz. The HFND platform bypasses this individual biological bottleneck through <strong>high-density spatial-temporal synchronization</strong> across distributed networks.</p>
-             <p>By orchestrating a coherent, phased-array firing matrix across cerebellar Purkinje cell fields, the motor command achieves an aggregate operational bandwidth within the <strong>400–1000 Hz spectrum</strong>. This network synchrony acts as an amplifier, suppressing background noise and executing sub-1s nystagmus reset (The AVSS Algorithm).</p>
+         <div class="arrow-v">&darr;</div>
+         <div class="loop-divider">Intracellular Molecular & Thermodynamic Layers</div>
+         <div class="loop-row">
+           <div class="loop-box box-int">
+             4. Mechanotransduction
+             <span>High-frequency muscle micro-tetanus. Integral power of signal replaces the requirement for external mechanical mass.</span>
+           </div>
+           <div class="arrow-v">&darr;</div>
+           <div class="loop-box box-int">
+             5. Mechanical mTORC1 Lock
+             <span>Continuous down-stream activation forced into an unconditional "ON" state via intensive membrane deformation.</span>
+           </div>
+           <div class="arrow-v">&darr;</div>
+           <div class="loop-box box-int">
+             6. Selective Macroautophagy
+             <span>Internal waste degradation (lipofuscin & broken mitochondria) strictly driven by FIFO biochemical recycling protocols.</span>
+           </div>
          </div>
-     </details>
 
-     <details class="accordion">
-         <summary class="accordion-title">3. Neurogenic mTORC1 & Piezoelectric Remodeling</summary>
-         <div class="accordion-content">
-             <p>When the synchronized 400–1000 Hz neural drive is active, the structural matrix of the body adapts through non-nutritional pathways:</p>
-             <p><strong>Amino Acid Hypersensitivity:</strong> Massive electrical depolarization of the myocellular membrane opens T-tubules and drives an inside-out calcium surge. This strain upregulates amino acid sensitivity, activating the <strong>mTORC1 pathway</strong> to sustain Type-II fast-twitch muscle fibers under extreme nutritional restriction (&lt;45g/day protein).</p>
-             <p><strong>Skeletal Acoustic Wave-Guiding:</strong> The crystalline hydroxyapatite matrix of the skeleton acts as an acoustic waveguide. The high-frequency micro-tremor enters into mechanical resonance with the bone tissue, generating localized micro-currents via <strong>collagen piezoelectricity</strong> to stimulate osteoblasts and bone remodeling (Wolff's Law).</p>
+         <div class="arrow-v">&darr;</div>
+         <div class="loop-divider">Thermodynamic Boundary & Final System Output</div>
+         <div class="loop-row">
+           <div class="loop-box box-barrier">
+             Thermodynamic Boundary Conditions
+             <span>External Amino Acid Input = 0 (&lt;45g/day). Chronic nitrogen deficit forces cell to source building blocks entirely from internal recycling.</span>
+           </div>
+           <div class="arrow-v">&darr;</div>
+           <div class="loop-box box-output">
+             7. Terminal System Output
+             <span>Dry Myofibrillar Compaction. Elite Type-II fiber density resynthesis achieved completely without sarcoplasmic water bloating.</span>
+          </div>
          </div>
-     </details> 
-        <details class="accordion">
-            <summary class="accordion-title">4. Neurogenic mTORC1 Override: Replacing Chemical Fuel with Electrical Drive</summary>
-            <div class="accordion-content">
-                <p><strong>The Core Paradigm Shift:</strong> Classical bio-gerontology processes muscle maintenance as a localized chemical problem, demanding high-protein loading to fuel the system. The HFND platform completely replaces this heavy chemical nutrient dependency with high-frequency electrical regulation.</p>
-                <p><strong>Bypassing Amino Acid Deficiency:</strong> Because the muscle fiber transitions from chemical-fueling to pure electrical-driving, the traditional metabolic requirement for massive protein intake is bypassed. Ultra-dense electrical depolarization at 400–1000 Hz forces a massive inside-out calcium surge, mechanically triggering the <strong>mTORC1 pathway</strong> and synthesizing structural Type II fast-twitch proteins under strict systemic protein constraints (&lt;45g/day).</p>
-                <p><strong>Selective Macroautophagy:</strong> Lacking external chemical fuel, the central nervous system uses this intense high-frequency electrical drive to force the cell into a high-efficiency macroautophagy mode. The cell aggressively recycles its own internal damaged proteins and cellular debris, turning metabolic waste into structural components to sustain elite force output in older age.</p>
-            </div>
-        </details>
 
-        
-        <details class="accordion">
-            <summary class="accordion-title">5. The Unifying Theory: 400–1000 Hz Core Bio-Resonance Matrix</summary>
-            <div class="accordion-content">
-                <p><strong>The Core Resonance Matrix:</strong> The ultra-high frequency spectrum operates as a systemic structural matrix linking vestibular signaling, skeletal resonance, and muscle activation. Controlled by the overriding Visual Anchor, it serves as a central neuro-gate that fully filters out post-rotational vestibular noise and coordinates the rapid, asynchronous cross-transfer of complex motor commands between hemispheres.</p>
-                <p><strong>Safety & Thermal Protection Mechanism:</strong> A critical biophysical feature of the 400–1000 Hz interface is that it causes zero tissue degradation or spastic thermal muscle damage. Unlike crude EMS devices that force muscle contraction via high-amplitude currents, our platform utilizes <strong>sub-sensory micro-amplitudes</strong> operating below the threshold of direct mechanical stimulation. The high-frequency drive serves strictly as an informational micro-code, leveraging <strong>Stochastic Resonance</strong> to eliminate synaptic noise and amplify volitional efferent signals without inducing artificial ischemia or localized metabolic exhaustion.</p>
-                <p><strong>Validation Target:</strong> Transitioning this pratique-validated hypothesis into an undisputed global medical breakthrough requires precise objective mapping. This pre-seed phase targets the hardware integration of High-Density Surface Electromyography (HD-sEMG) to isolate the 400–1000 Hz peripheral neural signal, alongside advanced Eye-Tracking arrays to mathematically quantify the latency of post-rotational gaze stabilization.</p>
-            </div>
-        </details>
-
-
- </section>
-
- <section>
-     <h2>Commercialization & Pre-Seed Stage</h2>
-     <p style="color: #e8e8ed; font-size: 16px; margin: 0 0 20px 0;">HFND Technologies is raising <strong>&euro;220,000 in Pre-Seed funding</strong> to scale this validated biological firmware into a commercial hardware-agnostic platform (Smart Eyewear and Intra-Aural devices) utilizing Vestibular Stochastic Resonance for fall prevention and aerospace medicine.</p>
-     <ul style="color: var(--gray); font-size: 15px;">
-         <li>&bull; <strong>60% Allocation:</strong> Hardware R&D and prototyping with Bosch Sensortec MEMS sensors.</li>
-         <li>&bull; <strong>25% Allocation:</strong> Digital codification of the proprietary 400–1000 Hz micro-code sequences.</li>
-         <li>&bull; <strong>15% Allocation:</strong> Global intellectual property and signaling waveform patent filings.</li>
-     </ul>
-      <div style="text-align: center; margin-top: 25px;">
- <a href="science.html" class="btn" style="background-color: transparent; border: 1px solid var(--accent); color: var(--accent); display: inline-block;">Open Full Scientific Manifesto (For Medical Board)</a>
- </div>
-
- </section>
-
- <footer>
-     <div class="footer-grid">
-         <div>
-             <strong>HFND Technologies</strong> — Stealth Stage DeepTech Startup<br>
-             Berlin, Germany (Available for on-site live demonstrations)
-         </div>
-         <div>
-             Contact: <a href="mailto:dmitry@hfnd-neuro.com" style="color: var(--accent); text-decoration: none;">dmitry@hfnd-neuro.com</a>
-         </div>
+       </div>
      </div>
- </footer>
- </div>
-</body>
-</html>
+     
