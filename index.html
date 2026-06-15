@@ -43,32 +43,32 @@
         .accordion-content p { margin: 0 0 12px 0; }
         .accordion-content p:last-child { margin: 0; }
         
-        /* СТИЛИ ДЛЯ АДАПТИВНОЙ ВЕКТОРНОЙ СХЕМЫ HFND */
-        .loop-container { margin: 30px 0 40px 0; padding: 25px; background: var(--card-bg); border: 1px solid #222; border-radius: 12px; }
-        .loop-title { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text); margin-bottom: 25px; text-align: center; border-bottom: 1px solid #222; padding-bottom: 15px; }
-        .loop-flow { display: flex; flex-direction: column; gap: 20px; position: relative; }
-        .loop-row { display: flex; justify-content: space-between; align-items: stretch; gap: 15px; }
-        .loop-box { flex: 1; padding: 15px; border-radius: 8px; font-size: 13px; font-weight: 500; display: flex; flex-direction: column; justify-content: center; border: 1px solid transparent; }
-        .loop-box span { font-size: 11px; font-weight: 400; color: var(--gray); margin-top: 5px; line-height: 1.4; }
-        .box-hw { background: rgba(0, 172, 193, 0.05); border-color: #00acc1; color: #00acc1; }
-        .box-ext { background: rgba(41, 151, 255, 0.05); border-color: var(--accent); color: var(--accent); }
-        .box-int { background: rgba(251, 140, 0, 0.05); border-color: #fb8000; color: #fb8c00; }
-        .box-barrier { background: rgba(229, 57, 53, 0.05); border-color: #e53935; color: #e53935; }
-        .box-output { background: rgba(67, 160, 71, 0.08); border-color: #43a047; color: #43a047; border-width: 2px; }
-        .loop-divider { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--gray); margin: 15px 0 5px 0; padding-left: 5px; border-left: 2px solid #333; }
-        .arrow-v { display: none; text-align: center; color: #333; font-size: 18px; margin: -5px 0; }
+        /* СТИЛИ ДЛЯ СХЕМЫ ИНТЕГРАЛЬНОГО ПАЗЛА */
+        .loop-container { margin: 25px 0 35px 0; padding: 20px; background: #0f0f0f; border: 1px solid #1c1c1e; border-radius: 10px; }
+        .loop-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text); margin-bottom: 20px; text-align: center; border-bottom: 1px solid #1c1c1e; padding-bottom: 12px; }
+        .loop-flow { display: flex; flex-direction: column; gap: 15px; }
+        .loop-row { display: flex; justify-content: space-between; align-items: stretch; gap: 12px; }
+        .loop-box { flex: 1; padding: 12px; border-radius: 6px; font-size: 12px; font-weight: 600; display: flex; flex-direction: column; justify-content: center; border: 1px solid transparent; line-height: 1.4; }
+        .loop-box span { font-size: 11px; font-weight: 400; color: var(--gray); margin-top: 4px; line-height: 1.3; }
+        .box-hw { background: rgba(0, 172, 193, 0.03); border-color: rgba(0, 172, 193, 0.4); color: #00acc1; }
+        .box-ext { background: rgba(41, 151, 255, 0.03); border-color: rgba(41, 151, 255, 0.4); color: var(--accent); }
+        .box-int { background: rgba(251, 140, 0, 0.03); border-color: rgba(251, 140, 0, 0.4); color: #fb8c00; }
+        .box-barrier { background: rgba(229, 57, 53, 0.03); border-color: rgba(229, 57, 53, 0.4); color: #e53935; }
+        .box-output { background: rgba(67, 160, 71, 0.05); border-color: rgba(67, 160, 71, 0.6); color: #43a047; border-width: 1.5px; }
+        .loop-divider { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gray); margin: 10px 0 2px 0; padding-left: 6px; border-left: 2px solid #222; }
+        .arrow-v { display: none; text-align: center; color: #222; font-size: 16px; margin: -4px 0; }
         
         .btn { display: inline-block; background-color: var(--accent); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 500; font-size: 15px; margin-top: 10px; transition: opacity 0.2s; }
         .btn:hover { opacity: 0.9; }
-        footer { padding: 40px 0; color: var(--gray); font-size: 14px; border-top: 1px solid #222; margin-top: 40px; }
+        footer { padding: 40px 0; color: var(--gray); font-size: 14px; }
         .footer-grid { display: flex; justify-content: space-between; align-items: center; }
         @media (max-width: 768px) { 
             h1 { font-size: 36px; } 
             .subtitle { font-size: 19px; } 
             .footer-grid { flex-direction: column; align-items: flex-start; gap: 15px; } 
-            .loop-row { flex-direction: column; gap: 10px; }
+            .loop-row { flex-direction: column; gap: 8px; }
             .arrow-v { display: block; }
-            .loop-divider { margin-top: 25px; }
+            .loop-divider { margin-top: 15px; }
         }
     </style>
 </head>
@@ -88,14 +88,14 @@
          <li><strong>Sensory Gating Reset:</strong> Sub-1 second central suppression of post-rotational vestibular nystagmus (AVSS algorithm), enabling instant transition to isolated, asynchronous 2-balls-in-1-hand fountain juggling.</li>
          <li><strong>Mitochondrial Protection:</strong> Continuous 3-year electrochemical shield using GlyNAC + Alpha-Lipoic Acid (ALA) to sustain optimal myocyte resting membrane potential (&approx; -90 mV).</li>
      </ul>
-     <a href="https://linktr.ee" class="btn" target="_blank">View Live Video Benchmarks</a>
+     <a href="https://linktr.ee/Independent.Researcher" class="btn" target="_blank">View Live Video Benchmarks</a>
  </section>
 
  <section>
      <h2>The Biophysical Framework</h2>
      <p class="science-intro">HFND Technologies introduces a core shift from resource-heavy chemical fueling to efficient, instantaneous frequency-driven regulation of the central nervous system matrix.</p>
      
-     <!-- INTEGRATION OF THE HFND CYBERNETIC LOOP SPECIFICATION -->
+     <!-- ОРИГИНАЛЬНАЯ СХЕМА КИБЕРНЕТИЧЕСКОГО КОНТУРА -->
      <div class="loop-container">
        <div class="loop-title">HFND End-to-End Cybernetic Loop Specification (Hardware ──> Cellular Core)</div>
        <div class="loop-flow">
