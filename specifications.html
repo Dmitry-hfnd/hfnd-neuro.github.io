@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cybernetic Loop Specifications | HFND</title>
+ <style>
+ :root { 
+    --bg: #0a0a0a; 
+    --text: #f5f5f7; 
+    --accent: #2997ff; 
+    --gray: #86868b; 
+    --card-bg: #121212; 
+    --blue-accent: #2997ff;
+    --orange-accent: #ff9500;
+    --red-accent: #ff3b30;
+    --green-accent: #34c759;
+ }
+ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+ .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+ header { padding: 40px 0 20px 0; border-bottom: 1px solid #222; margin-bottom: 30px; }
+ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px 0; }
+ .back-btn { display: inline-block; color: var(--accent); text-decoration: none; font-size: 16px; margin-bottom: 20px; font-weight: 500; }
+ .back-btn:hover { text-decoration: underline; }
+
+ /* Стили таблицы-схемы (Увеличенные шрифты) */
+ .framework-container { background-color: #0f0f11; border-radius: 14px; padding: 35px; margin-bottom: 40px; border: 1px solid #222; }
+ .framework-main-title { color: var(--blue-accent); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 12px; }
+ .framework-layer-title { color: var(--gray); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin: 35px 0 20px 0; }
+ .framework-layer-title:first-of-type { margin-top: 0; }
+ .framework-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+ .framework-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+ .framework-card { background-color: var(--card-bg); border-radius: 8px; padding: 24px; border-left: 4px solid transparent; }
+ .framework-card.blue { border-left-color: var(--blue-accent); }
+ .framework-card.orange { border-left-color: var(--orange-accent); }
+ .framework-card.red { border-left-color: var(--red-accent); }
+ .framework-card.green { border-left-color: var(--green-accent); }
+ .framework-card-title { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+ .framework-card.blue .framework-card-title { color: var(--blue-accent); }
+ .framework-card.orange .framework-card-title { color: var(--orange-accent); }
+ .framework-card.red .framework-card-title { color: var(--red-accent); }
+ .framework-card.green .framework-card-title { color: var(--green-accent); }
+ .framework-card-text { color: #e8e8ed; font-size: 15px; line-height: 1.5; }
+
+ /* Стили секции графиков */
+ .charts-section-title { font-size: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; color: #fff; text-align: center; }
+ .charts-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-top: 20px; }
+ .chart-box { background-color: #0f0f11; border: 1px solid #222; border-radius: 14px; padding: 25px; display: flex; flex-direction: column; align-items: center; }
+ .chart-title { font-size: 15px; font-weight: 500; color: #e8e8ed; margin-bottom: 15px; width: 100%; text-align: center; }
+ .svg-container { width: 100%; max-width: 450px; height: auto; }
+ 
+ @media (max-width: 600px) {
+    .framework-grid-3, .framework-grid-2, .charts-wrapper { grid-template-columns: 1fr; }
+    .charts-wrapper { min-width: 100%; }
+ }
+ </style>
+</head>
+<body>
+<div class="container">
+ <a href="manifesto.html" class="back-btn">&larr; Back to Scientific Manifesto</a>
+ 
+ <header>
+ <h1>HFND Cybernetic Loop: Specifications & Math Models</h1>
+ </header>
+
+ <!-- ТАБЛИЦА СХЕМЫ -->
+ <div class="framework-container">
+    <div class="framework-main-title">HFND END-TO-END CYBERNETIC LOOP SPECIFICATION (HARDWARE --&gt; CELLULAR CORE)</div>
+
+    <div class="framework-layer-title">EXTERNAL & HARDWARE CONTROL LAYERS</div>
+    <div class="framework-grid-3">
+        <div class="framework-card blue">
+            <div class="framework-card-title">1. AVSS Hardware Platform</div>
+            <div class="framework-card-text">Wearable Cybernetic Devices: Daily Vest Core or Active Band form factors embedded with 24-bit ADCs and FIFO buffers.</div>
+        </div>
+        <div class="framework-card blue">
+            <div class="framework-card-title">2. Vestibular Stochastic Resonance</div>
+            <div class="framework-card-text">Sub-threshold white noise propagation via axonal interface at 120 m/s to force-synchronize afferent systems.</div>
+        </div>
+        <div class="framework-card blue">
+            <div class="framework-card-title">3. Collective Purkinje Cells</div>
+            <div class="framework-card-text">Phase-locking summation inside the cerebellar cortex triggering coherent 400–1000 Hz efferent spike generation.</div>
+        </div>
+    </div>
+
+    <div class="framework-layer-title">INTRACELLULAR MOLECULAR & THERMODYNAMIC LAYERS</div>
+    <div class="framework-grid-3">
+        <div class="framework-card orange">
+            <div class="framework-card-title">4. Mechanotransduction</div>
+            <div class="framework-card-text">High-frequency muscle micro-tetanus. Integral power of signal replaces the requirement for external mechanical mass.</div>
+        </div>
+        <div class="framework-card orange">
+            <div class="framework-card-title">5. Mechanical mTORC1 Lock</div>
+            <div class="framework-card-text">Continuous down-stream activation forced into an unconditional "ON" state via intensive membrane deformation.</div>
+        </div>
+        <div class="framework-card orange">
+            <div class="framework-card-title">6. Selective Macroautophagy</div>
+            <div class="framework-card-text">Internal waste degradation (lipofuscin & broken mitochondria) strictly driven by FIFO biochemical recycling protocols.</div>
+        </div>
+    </div>
+
+    <div class="framework-layer-title">THERMODYNAMIC BOUNDARY & FINAL SYSTEM OUTPUT</div>
+    <div class="framework-grid-2">
+        <div class="framework-card red">
+            <div class="framework-card-title">Thermodynamic Boundary Conditions</div>
+            <div class="framework-card-text">External Amino Acid Input = 0 (&lt;45g/day). Chronic nitrogen deficit forces cell to source building blocks entirely from internal recycling.</div>
+        </div>
+        <div class="framework-card green">
+            <div class="framework-card-title">7. Terminal System Output</div>
+            <div class="framework-card-text">Dry Myofibrillar Compaction. Elite Type-II fiber density resynthesis achieved completely without sarcoplasmic water bloating.</div>
+        </div>
+    </div>
+ </div>
+
+ <!-- СЕКЦИЯ МАТЕМАТИЧЕСКИХ ГРАФИКОВ (SVG) -->
+ <div class="charts-section-title">Mathematical Specifications (AVSS Architecture)</div>
+ 
+ <div class="charts-wrapper">
+    <!-- ГРАФИК 1 -->
+    <div class="chart-box">
+        <div class="chart-title">Equation 1: CNS Response Latency vs. Frequency</div>
+        <div class="svg-container">
+            <svg viewBox="0 0 500 400" width="100%" height="100%" xmlns="http://w3.org">
+                <!-- Сетка и оси -->
+                <rect width="500" height="400" fill="#0f0f11"/>
+                <path d="M 60 50 L 60 350 L 460 350" stroke="#222" stroke-width="2" fill="none"/>
+                <!-- Линии сетки -->
+                <line x1="60" y1="290" x2="460" y2="290" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                <line x1="60" y1="50" x2="460" y2="50" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                <line x1="193" y1="50" x2="193" y2="350" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                <line x1="393" y1="50" x2="393" y2="350" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                
+                <!-- Подписи осей -->
+                <text x="260" y="385" fill="#86868b" font-size="11" text-anchor="middle">Cerebellar Core Frequency f (Hz)</text>
+                <text x="20" y="200" fill="#86868b" font-size="11" text-anchor="middle" transform="rotate(-90 20 200)">Response Lag Time (Seconds)</text>
+                
+                <!-- Значения осей -->
+                <text x="60" y="365" fill="#86868b" font-size="11" text-anchor="middle">0</text>
+                <text x="126" y="365" fill="#86868b" font-size="11" text-anchor="middle">200</text>
+                <text x="193" y="365" fill="#86868b" font-size="11" text-anchor="middle">400</text>
+                <text x="260" y="365" fill="#86868b" font-size="11" text-anchor="middle">600</text>
+                <text x="326" y="365" fill="#86868b" font-size="11" text-anchor="middle">800</text>
+                <text x="393" y="365" fill="#86868b" font-size="11" text-anchor="middle">1000</text>
+                <text x="460" y="365" fill="#86868b" font-size="11" text-anchor="middle">1200</text>
+                
+                <text x="45" y="353" fill="#86868b" font-size="11" text-anchor="end">0</text>
+                <text x="45" y="293" fill="#86868b" font-size="11" text-anchor="end">1</text>
+                <text x="45" y="233" fill="#86868b" font-size="11" text-anchor="end">2</text>
+                <text x="45" y="173" fill="#86868b" font-size="11" text-anchor="end">3</text>
+                <text x="45" y="113" fill="#86868b" font-size="11" text-anchor="end">4</text>
+                <text x="45" y="53" fill="#86868b" font-size="11" text-anchor="end">5</text>
+
+                <!-- Порог Target Threshold (1.0 s) -->
+                <line x1="60" y1="290" x2="460" y2="290" stroke="#86868b" stroke-width="1.5" stroke-dasharray="5,5"/>
+
+                <!-- Зона интеграла кривой (Заливка) -->
+                <path d="M 193 290 Q 293 330 393 290 Z" fill="#ff3b30" fill-opacity="0.15"/>
+
