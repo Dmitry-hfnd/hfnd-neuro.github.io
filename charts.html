@@ -5,101 +5,37 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>The Ontology of Neural Drive | HFND Scientific Manifesto</title>
  <style>
- :root { 
-    --bg: #0a0a0a; 
-    --text: #f5f5f7; 
-    --accent: #2997ff; 
-    --gray: #86868b; 
-    --card-bg: #121212; 
-    /* Дополнительные переменные для схемы */
-    --blue-accent: #2997ff;
-    --orange-accent: #ff9500;
-    --red-accent: #ff3b30;
-    --green-accent: #34c759;
- }
+ :root { --bg: #0a0a0a; --text: #f5f5f7; --accent: #2997ff; --gray: #86868b; --card-bg: #121212; }
  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
- .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+ .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
  header { padding: 60px 0 30px 0; border-bottom: 1px solid #222; }
- h1 { font-size: 38px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px 0; color: var(--text); }
- .subtitle { font-size: 18px; color: var(--accent); font-weight: 400; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 1px; }
- section { padding: 30px 0; border-bottom: 1px solid #222; }
- h2 { font-size: 22px; font-weight: 600; margin: 0 0 15px 0; color: var(--accent); }
- p { font-size: 15px; color: #e8e8ed; margin: 0 0 15px 0; text-align: justify; }
+ h1 { font-size: 42px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 12px 0; color: var(--text); }
+ .subtitle { font-size: 20px; color: var(--accent); font-weight: 400; margin: 0 0 24px 0; text-transform: uppercase; letter-spacing: 1px; }
+ section { padding: 35px 0; border-bottom: 1px solid #222; }
+ h2 { font-size: 26px; font-weight: 600; margin: 0 0 18px 0; color: var(--accent); }
+ p { font-size: 17px; color: #e8e8ed; margin: 0 0 18px 0; text-align: justify; }
  strong { color: var(--text); }
- .back-btn { display: inline-block; color: var(--accent); text-decoration: none; font-size: 15px; margin-bottom: 30px; }
+ .back-btn { display: inline-block; color: var(--accent); text-decoration: none; font-size: 16px; margin-bottom: 30px; }
  .back-btn:hover { text-decoration: underline; }
-
- /* Стили для интерактивной схемы Framework */
- .framework-container {
-    background-color: #0f0f11;
-    border-radius: 12px;
-    padding: 30px;
-    margin: 30px 0;
-    border: 1px solid #222;
- }
- .framework-main-title {
-    color: var(--blue-accent);
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #222;
-    padding-bottom: 10px;
- }
- .framework-layer-title {
-    color: var(--gray);
-    font-size: 11px;
+ 
+ /* Кнопка ссылки на страницу со спецификациями */
+ .spec-link-btn {
+    display: inline-block;
+    background-color: #1c1c1e;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: 25px 0 15px 0;
+    margin: 20px 0;
+    border: 1px solid #3a3a3c;
+    transition: all 0.2s ease;
  }
- .framework-layer-title:first-of-type { margin-top: 0; }
- .framework-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
- }
- .framework-grid-2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
- }
- .framework-card {
-    background-color: var(--card-bg);
-    border-radius: 6px;
-    padding: 20px;
-    border-left: 3px solid transparent;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
- }
- .framework-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
- }
- .framework-card.blue { border-left-color: var(--blue-accent); }
- .framework-card.orange { border-left-color: var(--orange-accent); }
- .framework-card.red { border-left-color: var(--red-accent); }
- .framework-card.green { border-left-color: var(--green-accent); }
-
- .framework-card-title {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
- }
- .framework-card.blue .framework-card-title { color: var(--blue-accent); }
- .framework-card.orange .framework-card-title { color: var(--orange-accent); }
- .framework-card.red .framework-card-title { color: var(--red-accent); }
- .framework-card.green .framework-card-title { color: var(--green-accent); }
-
- .framework-card-text {
-    color: #a1a1a6;
-    font-size: 13px;
-    line-height: 1.4;
- }
- @media (max-width: 600px) {
-    .framework-grid-3, .framework-grid-2 { grid-template-columns: 1fr; }
-    .framework-container { padding: 15px; }
+ .spec-link-btn:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
  }
  </style>
 </head>
@@ -111,56 +47,10 @@
  <div class="subtitle">Systemic Override of Age-Related Involution</div>
  <p><strong>Theoretical substantiation of the biological HFND model (N=1) for integration into clinical gerontology and aerospace medicine.</strong></p>
  <p>Classical medical paradigms view biological aging as a linear, genetically determined decay of the neuromuscular apparatus and vestibular functions. However, the verified markers of the HFND model (Age 63, grip strength >99th percentile, statodynamic axial load >170 kg under chronic protein restriction &lt;45g/day, and post-rotational vestibular reset latency &lt;1s) prove the existence of an alternative high-frequency central regulation protocol. This phenomenon is not a random genetic anomaly, but the result of a deliberate transfer of reflex protection mechanisms to the level of predictive, feedforward volitional control.</p>
+ 
+ <!-- Ссылка на следующую страницу технических спецификаций -->
+ <a href="specifications.html" class="spec-link-btn">View Cybernetic Loop Specifications & Mathematical Models &rarr;</a>
  </header>
-
- <!-- ВСТРОЕННАЯ СХЕМА: THE BIOPHYSICAL FRAMEWORK -->
- <div class="framework-container">
-    <div class="framework-main-title">HFND END-TO-END CYBERNETIC LOOP SPECIFICATION (HARDWARE --&gt; CELLULAR CORE)</div>
-
-    <div class="framework-layer-title">EXTERNAL & HARDWARE CONTROL LAYERS</div>
-    <div class="framework-grid-3">
-        <div class="framework-card blue">
-            <div class="framework-card-title">1. AVSS Hardware Platform</div>
-            <div class="framework-card-text">Wearable Cybernetic Devices: Daily Vest Core or Active Band form factors embedded with 24-bit ADCs and FIFO buffers.</div>
-        </div>
-        <div class="framework-card blue">
-            <div class="framework-card-title">2. Vestibular Stochastic Resonance</div>
-            <div class="framework-card-text">Sub-threshold white noise propagation via axonal interface at 120 m/s to force-synchronize afferent systems.</div>
-        </div>
-        <div class="framework-card blue">
-            <div class="framework-card-title">3. Collective Purkinje Cells</div>
-            <div class="framework-card-text">Phase-locking summation inside the cerebellar cortex triggering coherent 400–1000 Hz efferent spike generation.</div>
-        </div>
-    </div>
-
-    <div class="framework-layer-title">INTRACELLULAR MOLECULAR & THERMODYNAMIC LAYERS</div>
-    <div class="framework-grid-3">
-        <div class="framework-card orange">
-            <div class="framework-card-title">4. Mechanotransduction</div>
-            <div class="framework-card-text">High-frequency muscle micro-tetanus. Integral power of signal replaces the requirement for external mechanical mass.</div>
-        </div>
-        <div class="framework-card orange">
-            <div class="framework-card-title">5. Mechanical mTORC1 Lock</div>
-            <div class="framework-card-text">Continuous down-stream activation forced into an unconditional "ON" state via intensive membrane deformation.</div>
-        </div>
-        <div class="framework-card orange">
-            <div class="framework-card-title">6. Selective Macroautophagy</div>
-            <div class="framework-card-text">Internal waste degradation (lipofuscin & broken mitochondria) strictly driven by FIFO biochemical recycling protocols.</div>
-        </div>
-    </div>
-
-    <div class="framework-layer-title">THERMODYNAMIC BOUNDARY & FINAL SYSTEM OUTPUT</div>
-    <div class="framework-grid-2">
-        <div class="framework-card red">
-            <div class="framework-card-title">Thermodynamic Boundary Conditions</div>
-            <div class="framework-card-text">External Amino Acid Input = 0 (&lt;45g/day). Chronic nitrogen deficit forces cell to source building blocks entirely from internal recycling.</div>
-        </div>
-        <div class="framework-card green">
-            <div class="framework-card-title">7. Terminal System Output</div>
-            <div class="framework-card-text">Dry Myofibrillar Compaction. Elite Type-II fiber density resynthesis achieved completely without sarcoplasmic water bloating.</div>
-        </div>
-    </div>
- </div>
 
  <section>
  <h2>Block 1. Neuromuscular Endplate Physiology & Synaptic Gating</h2>
@@ -170,3 +60,24 @@
  <section>
  <h2>Block 2. Cellular Thermodynamics & Autophagy Leverage</h2>
  <p><strong>Neurogenic mTORC1 Activation:</strong> General clinical dogmas state that hypertrophic modeling of Type II fibers is impossible without a massive exogenous amino acid pool. The HFND model presents a direct inversion of this rule. Dense, high-frequency electrical depolarization opens T-tubules and forces an intense inside-out calcium surge. This localized mechanical stress upregulates inside-cell amino acid sensor sensitivity, allowing targeted delivery of L-Leucine and L-Glutamine via a precise carbohydrate vector to force-activate the mTORC1 pathway without traditional high-protein nutrition dependencies (&lt;45g/day).</p>
+ <p><strong>Selective Macroautophagy:</strong> Lacking exogenous excess amino acids, the central nervous system utilizes this targeted high-frequency drive to switch cells into a high-efficiency macroautophagy mode. Instead of energy-expensive external building, the cell actively recycles internal damaged proteins and interstitial debris, using these endogenous resources to rebuild active contractile components.</p>
+ </section>
+
+ <section>
+ <h2>Block 3. Membrane Biophysics & Tissue Piezo-Resonance</h2>
+ <p><strong>Electrochemical Rest Maintenance:</strong> Maintaining extreme structural force demands a highly stable myocyte resting potential around &approx; -90 mV. Systemic long-term use of GlyNAC (Glycine + NAC) in synergy with Alpha-Lipoic Acid (ALA) secures an ongoing enzymatic cycle of glutathione restoration directly inside mitochondrial membranes. This process blocks peripheral metabolic fatigue signaling to the CNS, allowing continuous high-frequency output.</p>
+ <p><strong>Tendon-Bone Piezoelectric Resonator:</strong> High-density micro-vibrations traveling down the kinetic chain act as acoustic soundwaves. The crystalline hydroxyapatite matrix in bones and collagen fibers in tendons respond via the direct Wolff's Law Piezoelectric Effect. This physical stress generates localized micro-electrical fields, preserving bone density and tendon viscoelasticity, completely halting age-related mineral leakage without high nutritional dependency.</p>
+ </section>
+
+ <section>
+ <h2>Block 4. Sensory Gating & Asynchronous Hemisphere Cross-Transfer</h2>
+ <p><strong>The Visual Anchor Mechanism:</strong> Rapid rotational motion triggers fluid inertia inside the semicircular canals, traditionally inducing nystagmus, vestibular panic, and systemic motor failure. The AVSS protocol achieves a central neuro-gating override. Isometric axial locking fully saturates high-density muscle spindle fields (>100 spindles/gram) in deep cervical muscles, gating out vestibular noise via reciprocal inhibition. The CNS establishes an instant Visual Anchor, prioritizing coherent visual tracking over inner-ear fluid movement.</p>
+ <p><strong>Asynchronous Cross-Transfer:</strong> The rapid transition from a balanced 3-ball pattern to isolated, high-frequency 2-balls-in-1-hand fountain routines immediately following vestibular stress showcases a rare pattern of hemispheric autonomy. The CNS coordinates a high-speed cross-transfer of motor commands, instantly suppressing the left hemisphere while explosively accelerating the right, showcasing extreme interneuron plasticity under pressure.</p>
+ </section>
+
+ <footer>
+ <p style="color: var(--gray); font-size: 15px; text-align: center; margin-top: 40px;">HFND Technologies &copy; 2026 | Stealth Stage DeepTech Startup | Berlin, Germany</p>
+ </footer>
+</div>
+</body>
+</html>
