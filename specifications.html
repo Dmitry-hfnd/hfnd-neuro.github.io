@@ -112,109 +112,78 @@
     </div>
  </div>
 
-  <!-- СЕКЦИЯ МАТЕМАТИЧЕСКИХ ГРАФИКОВ (SVG) -->
- <div class="charts-section-title">Mathematical Specifications (AVSS Architecture)</div>
+ <!-- СЕКЦИЯ МАТЕМАТИЧЕСКИХ ГРАФИКОВ (УВЕЛИЧЕННЫЕ И КЛИКАБЕЛЬНЫЕ) -->
+ <div class="charts-section-title" style="margin-top: 50px; font-size: 22px; color: var(--accent);">Mathematical Specifications (AVSS Architecture)</div>
+ <p style="text-align: center; color: var(--gray); font-size: 14px; margin-bottom: 30px;">💡 Click on any chart to open it in full size</p>
  
- <div class="charts-wrapper">
-    <!-- ГРАФИК 1 -->
-    <div class="chart-box">
+ <div class="charts-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 25px;">
+    
+    <!-- ГРАФИК 1 (КЛИКАБЕЛЬНЫЙ) -->
+    <a href="data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 500 350'><rect width='500' height='350' fill='%230f0f11'/><line x1='60' y1='30' x2='60' y2='300' stroke='%23222' stroke-width='2'/><line x1='60' y1='300' x2='460' y2='300' stroke='%23222' stroke-width='2'/><line x1='60' y1='240' x2='460' y2='240' stroke='%231c1c1e' stroke-dasharray='3,3'/><line x1='193' y1='30' x2='193' y2='300' stroke='%231c1c1e' stroke-dasharray='3,3'/><line x1='393' y1='30' x2='393' y2='300' stroke='%231c1c1e' stroke-dasharray='3,3'/><text x='260' y='335' fill='%2386868b' font-size='12' text-anchor='middle'>Cerebellar Core Frequency f (Hz)</text><text x='20' y='165' fill='%2386868b' font-size='12' text-anchor='middle' transform='rotate(-90 20 165)'>Response Lag Time (Seconds)</text><line x1='60' y1='240' x2='460' y2='240' stroke='%2386868b' stroke-width='1.5' stroke-dasharray='5,5'/><path d='M 193 240 Q 293 290 393 240 Z' fill='%23ff3b30' fill-opacity='0.15'/><path d='M 60 40 L 193 40 L 193 240 Q 293 290 393 240 L 393 40 L 460 40' fill='none' stroke='%23ff3b30' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg>" target="_blank" class="chart-box" style="text-decoration: none; display: block;">
         <div class="chart-title">Equation 1: CNS Response Latency vs. Frequency</div>
         <div class="svg-container">
-            <svg viewBox="0 0 500 400" width="100%" height="100%" xmlns="http://w3.org" style="background-color: #0f0f11 !important; display: block !important;">
-                <!-- Фон -->
-                <rect width="500" height="400" fill="#0f0f11"/>
+            <svg viewBox="0 0 500 340" width="100%" height="100%" xmlns="http://w3.org" style="background-color: #0f0f11 !important; display: block !important;">
+                <rect width="500" height="340" fill="#0f0f11"/>
+                <line x1="60" y1="30" x2="60" y2="300" stroke="#222222" stroke-width="2" style="stroke: #222222 !important;"/>
+                <line x1="60" y1="300" x2="460" y2="300" stroke="#222222" stroke-width="2" style="stroke: #222222 !important;"/>
                 
-                <!-- Главные Оси -->
-                <line x1="60" y1="50" x2="60" y2="350" stroke="#222222" stroke-width="2" style="stroke: #222222 !important;"/>
-                <line x1="60" y1="350" x2="460" y2="350" stroke="#222222" stroke-width="2" style="stroke: #222222 !important;"/>
+                <line x1="60" y1="240" x2="460" y2="240" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
+                <line x1="193" y1="30" x2="193" y2="300" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
+                <line x1="393" y1="30" x2="393" y2="300" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
                 
-                <!-- Линии сетки -->
-                <line x1="60" y1="290" x2="460" y2="290" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
-                <line x1="60" y1="50" x2="460" y2="50" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
-                <line x1="193" y1="50" x2="193" y2="350" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
-                <line x1="393" y1="50" x2="393" y2="350" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
+                <text x="260" y="335" fill="#86868b" font-size="12" text-anchor="middle" style="fill: #86868b !important;">Cerebellar Core Frequency f (Hz)</text>
+                <text x="20" y="165" fill="#86868b" font-size="12" text-anchor="middle" transform="rotate(-90 20 165)" style="fill: #86868b !important;">Response Lag Time (Seconds)</text>
                 
-                <!-- Текстовые подписи осей -->
-                <text x="260" y="385" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">Cerebellar Core Frequency f (Hz)</text>
-                <text x="20" y="200" fill="#86868b" font-size="11" text-anchor="middle" transform="rotate(-90 20 200)" style="fill: #86868b !important;">Response Lag Time (Seconds)</text>
+                <text x="60" y="315" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">0</text>
+                <text x="193" y="315" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">400</text>
+                <text x="393" y="315" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">1000</text>
+                <text x="460" y="315" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">1200</text>
                 
-                <!-- Шкала X -->
-                <text x="60" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">0</text>
-                <text x="126" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">200</text>
-                <text x="193" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">400</text>
-                <text x="260" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">600</text>
-                <text x="326" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">800</text>
-                <text x="393" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">1000</text>
-                <text x="460" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">1200</text>
-                
-                <!-- Шкала Y -->
-                <text x="45" y="353" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">0</text>
-                <text x="45" y="293" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">1</text>
-                <text x="45" y="233" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">2</text>
-                <text x="45" y="173" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">3</text>
-                <text x="45" y="113" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">4</text>
-                <text x="45" y="53" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">5</text>
+                <text x="45" y="304" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">0</text>
+                <text x="45" y="244" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">1</text>
+                <text x="45" y="64" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">5</text>
 
-                <!-- Пунктирный порог Target Threshold (1.0 s) -->
-                <line x1="60" y1="290" x2="460" y2="290" stroke="#86868b" stroke-width="1.5" stroke-dasharray="5,5" style="stroke: #86868b !important;"/>
-
-                <!-- Розовая затененная область (интеграл) под графиком -->
-                <polygon points="193,290 198,293.9 203,297.6 208,301.1 213,304.4 218,307.5 223,310.4 228,313.1 233,315.6 238,317.9 243,320.0 248,321.9 253,323.6 258,325.1 263,326.4 268,327.5 273,328.4 278,329.1 283,329.6 288,329.9 293,330.0 298,329.9 303,329.6 308,329.1 313,328.4 318,327.5 323,326.4 328,325.1 333,323.6 338,321.9 343,320.0 348,317.9 353,315.6 358,313.1 363,310.4 368,307.5 373,304.4 378,301.1 383,297.6 388,293.9 393,290" fill="#ff3b30" fill-opacity="0.15" style="fill: #ff3b30 !important; fill-opacity: 0.15 !important;"/>
-
-                <!-- ГЛАВНЫЙ ГРАФИК 1 (Пуленепробиваемый POLYLINE) -->
-                <polyline points="60,80 193,80 193,290 198,293.9 203,297.6 208,301.1 213,304.4 218,307.5 223,310.4 228,313.1 233,315.6 238,317.9 243,320.0 248,321.9 253,323.6 258,325.1 263,326.4 268,327.5 273,328.4 278,329.1 283,329.6 288,329.9 293,330.0 298,329.9 303,329.6 308,329.1 313,328.4 318,327.5 323,326.4 328,325.1 333,323.6 338,321.9 343,320.0 348,317.9 353,315.6 358,313.1 363,310.4 368,307.5 373,304.4 378,301.1 383,297.6 388,293.9 393,290 393,80 460,80" fill="none" stroke="#ff3b30" stroke-width="4" style="fill: none !important; stroke: #ff3b30 !important; stroke-width: 4px !important; stroke-linecap: round !important; stroke-linejoin: round !important;"/>
-
-                <!-- Легенда -->
-                <rect x="250" y="60" width="190" height="45" fill="#121212" rx="4" opacity="0.8"/>
-                <line x1="260" y1="72" x2="280" y2="72" stroke="#ff3b30" stroke-width="3" style="stroke: #ff3b30 !important; stroke-width: 3px !important;"/>
-                <text x="288" y="76" fill="#fff" font-size="10" style="fill: #ffffff !important;">    tau_control = tau_0 / (1 + VSR(f))</text>
-                <line x1="260" y1="92" x2="280" y2="92" stroke="#86868b" stroke-width="1.5" stroke-dasharray="3,3" style="stroke: #86868b !important;"/>
-                <text x="288" y="96" fill="#86868b" font-size="10" style="fill: #86868b !important;">Target Threshold (1.0 s)</text>
+                <line x1="60" y1="240" x2="460" y2="240" stroke="#86868b" stroke-width="1.5" stroke-dasharray="5,5" style="stroke: #86868b !important;"/>
+                <path d="M 193 240 Q 293 290 393 240 Z" fill="#ff3b30" fill-opacity="0.15" style="fill: #ff3b30 !important; fill-opacity: 0.15 !important;"/>
+                <path d="M 60 40 L 193 40 L 193 240 Q 293 290 393 240 L 393 40 L 460 40" fill="none" style="stroke: #ff3b30 !important; stroke-width: 4px !important; fill: none !important; stroke-linecap: round !important; stroke-linejoin: round !important;"/>
             </svg>
         </div>
-    </div>
+    </a>
 
-    <!-- ГРАФИК 2 -->
-    <div class="chart-box">
+    <!-- ГРАФИК 2 (КЛИКАБЕЛЬНЫЙ + ЖЕЛЕЗНОЕ ИСПРАВЛЕНИЕ ЛИНИИ) -->
+    <a href="data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 500 350'><rect width='500' height='350' fill='%230f0f11'/><line x1='60' y1='30' x2='60' y2='300' stroke='%23222' stroke-width='2'/><line x1='60' y1='300' x2='460' y2='300' stroke='%23222' stroke-width='2'/><line x1='60' y1='112' x2='460' y2='112' stroke='%231c1c1e' stroke-dasharray='3,3'/><line x1='193' y1='30' x2='193' y2='300' stroke='%231c1c1e' stroke-dasharray='3,3'/><line x1='393' y1='30' x2='393' y2='300' stroke='%231c1c1e' stroke-dasharray='3,3'/><text x='260' y='335' fill='%2386868b' font-size='12' text-anchor='middle'>Cerebellar Core Frequency f (Hz)</text><text x='20' y='165' fill='%2386868b' font-size='12' text-anchor='middle' transform='rotate(-90 20 165)'>Internal Fiber Tension (Normalized)</text><line x1='60' y1='112' x2='460' y2='112' stroke='%23ffffff' stroke-width='1.5' stroke-dasharray='4,4'/><path d='M 193 285 Q 310 180 393 40 L 393 300 L 193 300 Z' fill='%2300f5d4' fill-opacity='0.08'/><path d='M 60 285 L 193 285 L 193 240 Q 310 150 393 40 L 393 300 L 460 300' fill='none' stroke='%2300f5d4' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg>" target="_blank" class="chart-box" style="text-decoration: none; display: block;">
         <div class="chart-title">Equation 2: Internal Tension vs. Frequency</div>
         <div class="svg-container">
-            <svg viewBox="0 0 500 400" width="100%" height="100%" xmlns="http://w3.org" style="background-color: #0f0f11 !important; display: block !important;">
-                <!-- Фон -->
-                <rect width="500" height="400" fill="#0f0f11"/>
+            <svg viewBox="0 0 500 340" width="100%" height="100%" xmlns="http://w3.org" style="background-color: #0f0f11 !important; display: block !important;">
+                <rect width="500" height="340" fill="#0f0f11"/>
+                <line x1="60" y1="30" x2="60" y2="300" stroke="#222222" stroke-width="2" style="stroke: #222222 !important;"/>
+                <line x1="60" y1="300" x2="460" y2="300" stroke="#222222" stroke-width="2" style="stroke: #222222 !important;"/>
                 
-                <!-- Главные Оси -->
-                <line x1="60" y1="50" x2="60" y2="350" stroke="#222222" stroke-width="2" style="stroke: #222222 !important;"/>
-                <line x1="60" y1="350" x2="460" y2="350" stroke="#222222" stroke-width="2" style="stroke: #222222 !important;"/>
-                
-                <!-- Линии сетки -->
-                <line x1="60" y1="110" x2="460" y2="110" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
-                <line x1="193" y1="50" x2="193" y2="350" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
-                <line x1="393" y1="50" x2="393" y2="350" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
+                <line x1="60" y1="112" x2="460" y2="112" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
+                <line x1="193" y1="30" x2="193" y2="300" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
+                <line x1="393" y1="30" x2="393" y2="300" stroke="#1c1c1e" stroke-dasharray="3,3" style="stroke: #1c1c1e !important;"/>
 
-                <!-- Текстовые подписи осей -->
-                <text x="260" y="385" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">Cerebellar Core Frequency f (Hz)</text>
-                <text x="20" y="200" fill="#86868b" font-size="11" text-anchor="middle" transform="rotate(-90 20 200)" style="fill: #86868b !important;">Internal Fiber Tension (Normalized)</text>
+                <text x="260" y="335" fill="#86868b" font-size="12" text-anchor="middle" style="fill: #86868b !important;">Cerebellar Core Frequency f (Hz)</text>
+                <text x="20" y="165" fill="#86868b" font-size="12" text-anchor="middle" transform="rotate(-90 20 165)" style="fill: #86868b !important;">Internal Fiber Tension (Normalized)</text>
 
-                <!-- Шкала X -->
-                <text x="60" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">0</text>
-                <text x="126" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">200</text>
-                <text x="193" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">400</text>
-                <text x="260" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">600</text>
-                <text x="326" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">800</text>
-                <text x="393" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">1000</text>
-                <text x="460" y="365" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">1200</text>
+                <text x="60" y="315" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">0</text>
+                <text x="193" y="315" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">400</text>
+                <text x="393" y="315" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">1000</text>
+                <text x="460" y="315" fill="#86868b" font-size="11" text-anchor="middle" style="fill: #86868b !important;">1200</text>
 
-                <!-- Шкала Y -->
-                <text x="45" y="353" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">0</text>
-                <text x="45" y="303" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">20</text>
-                <text x="45" y="253" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">40</text>
-                <text x="45" y="203" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">60</text>
-                <text x="45" y="153" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">80</text>
-                <text x="45" y="103" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">100</text>
-                <text x="45" y="53" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">120</text>
+                <text x="45" y="304" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">0</text>
+                <text x="45" y="116" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">75</text>
+                <text x="45" y="44" fill="#86868b" font-size="11" text-anchor="end" style="fill: #86868b !important;">120</text>
 
-                <!-- Белый пунктирный порог mTORC1 Threshold -->
-                <line x1="60" y1="162" x2="460" y2="162" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4,4" style="stroke: #ffffff !important;"/>
+                <!-- Горизонтальный пунктир около 75 (mTORC1 Threshold) -->
+                <line x1="60" y1="112" x2="460" y2="112" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4,4" style="stroke: #ffffff !important;"/>
 
-                <!-- Бирюзовая затененная область (интеграл) под графиком -->
+                <!-- Бирюзовая заливка под графиком -->
+                <path d="M 193 285 Q 310 180 393 40 L 393 300 L 193 300 Z" fill="#00f5d4" fill-opacity="0.08" style="fill: #00f5d4 !important; fill-opacity: 0.08 !important;"/>
 
+                <!-- Главный бирюзовый график (Переписан на чистый, нативный PATH) -->
+                <path d="M 60 285 L 193 285 L 193 240 Q 310 150 393 40 L 393 300 L 460 300" fill="none" style="stroke: #00f5d4 !important; stroke-width: 4px !important; fill: none !important; stroke-linecap: round !important; stroke-linejoin: round !important;"/>
+            </svg>
+        </div>
+    </a>
+ </div>
