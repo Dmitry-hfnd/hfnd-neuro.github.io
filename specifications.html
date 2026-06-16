@@ -197,11 +197,11 @@
                 <!-- Горизонтальный белый пунктир mTORC1 Порог на уровне 75 -->
                 <line x1="60" y1="144" x2="460" y2="144" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4,4"/>
 
-                <!-- Бирюзовая область интеграла (Заливка под кривой) -->
-                <path d="M 193 290 L 193 258 Q 260 140 393 100 L 393 300 Z" fill="#00f5d4" fill-opacity="0.08"/>
+                <!-- Бирюзовая область интеграла (Заливка под крувой) -->
+                <path d="M 193 290 L 193 258 Q 250 80 393 55 L 393 290 Z" fill="#00f5d4" fill-opacity="0.08"/>
 
-                <!-- Точная геометрия кривой уравнения 2 (Плоская линия -> Прыжок -> Дуга -> Обрыв) -->
-                <path d="M 60 290 L 193 290 L 193 258 Q 260 140 393 100 L 393 300 L 460 300" fill="none" stroke="#00f5d4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- ИСПРАВЛЕННАЯ КРИВАЯ: Крутая парабола + правый хвост на базовом уровне (290) -->
+                <path d="M 60 290 L 193 290 L 193 258 Q 250 80 393 55 L 393 290 L 460 290" fill="none" stroke="#00f5d4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 
                 <rect x="210" y="235" width="240" height="45" fill="#121212" rx="4" opacity="0.9"/>
                 <line x1="220" y1="247" x2="240" y2="247" stroke="#00f5d4" stroke-width="3"/>
@@ -211,27 +211,3 @@
             </svg>
         </div>
     </div>
- </div>
-
- <!-- HTML-КОД МОДАЛЬНОГО ОКНА ДЛЯ ПРОСМОТРА ВО ВЕСЬ ЭКРАН -->
- <div id="chartModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(5, 5, 5, 0.95); z-index: 10000; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
-    <div style="position: absolute; top: 20px; right: 30px; color: #fff; font-size: 35px; font-weight: bold; cursor: pointer; user-select: none;" onclick="closeModal()">&times;</div>
-    <div id="modalContent" style="width: 100%; max-width: 900px; height: auto; display: flex; justify-content: center; align-items: center;"></div>
- </div>
-
- <!-- КОМПАКТНЫЙ СКРИПТ УПРАВЛЕНИЯ МОДАЛЬНЫМ ОКНОМ -->
- <script>
- function openModal(svgContainerId) {
-     var svgHtml = document.getElementById(svgContainerId).innerHTML;
-     document.getElementById('modalContent').innerHTML = svgHtml;
-     document.getElementById('chartModal').style.display = 'flex';
- }
- function closeModal() {
-     document.getElementById('chartModal').style.display = 'none';
-     document.getElementById('modalContent').innerHTML = '';
- }
- // Закрытие окна по кнопке Esc
- window.addEventListener('keydown', function(e) {
-     if (e.key === 'Escape') closeModal();
- });
- </script>
