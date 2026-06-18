@@ -48,6 +48,10 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
 .chart-title { font-size: 15px; font-weight: 500; color: #e8e8ed; margin-bottom: 15px; width: 100%; text-align: center; }
 .svg-container { width: 100%; max-width: 450px; height: auto; }
 
+#chartModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(5, 5, 5, 0.98); z-index: 10000; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+#modalContent { width: 100%; max-width: 850px; height: auto; }
+.modal-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 35px; font-weight: bold; cursor: pointer; user-select: none; }
+
 @media (max-width: 600px) {
  .framework-grid-3, .framework-grid-2, .charts-wrapper { grid-template-columns: 1fr; }
 }
@@ -108,15 +112,15 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
  </div>
 </div>
 
-<div class="charts-section-title" style="margin-top: 50px; font-size: 24px; color: var(--accent);">Mathematical Specifications (AVSS Architecture)</div>
+<div class="charts-section-title">Mathematical Specifications (AVSS Architecture)</div>
 <p style="text-align: center; color: var(--gray); font-size: 15px; margin-bottom: 30px;">💡 Click on any chart to expand to full screen</p>
 
 <div class="charts-wrapper">
  <!-- ЛЕВЫЙ ГРАФИК -->
- <div class="chart-box" style="cursor: pointer;" onclick="openModal('graph1')">
+ <div class="chart-box" onclick="openModal('graph1')">
  <div class="chart-title">Equation 1: CNS Response Latency vs. Frequency</div>
  <div class="svg-container">
- <svg id="graph1" viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://w3.org">
+ <svg id="graph1" viewBox="0 0 500 350" width="100%" height="100%">
  <rect width="500" height="350" fill="#0f0f11"/>
  <line x1="60" y1="30" x2="60" y2="300" stroke="#222222" stroke-width="2"/>
  <line x1="60" y1="300" x2="460" y2="300" stroke="#222222" stroke-width="2"/>
@@ -139,8 +143,7 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
  <text x="45" y="104" fill="#86868b" font-size="11" text-anchor="end">4</text>
  <text x="45" y="54" fill="#86868b" font-size="11" text-anchor="end">5</text>
  <line x1="60" y1="250" x2="460" y2="250" stroke="#86868b" stroke-width="1.5" stroke-dasharray="5,5"/>
- <path d="M 193 250 Q 293 300 393 250 Z" fill="#ff3b30" fill-opacity="0.15"/>
- <path d="M 60 75 L 193 75 L 193 250 Q 293 300 393 250 L 393 75 L 460 75" fill="none" stroke="#ff3b30" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M 60 75 L 193 75 L 193 250 L 393 285 L 460 290" fill="none" stroke="#ff3b30" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
  <rect x="250" y="45" width="190" height="45" fill="#121212" rx="4" opacity="0.9"/>
  <text x="260" y="62" fill="#fff" font-size="11" font-family="monospace">τ_control = τ_0 / (1+VSR(f))</text>
  <text x="260" y="80" fill="#86868b" font-size="10">Target Threshold (1.0 s)</text>
@@ -148,10 +151,8 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
  </div>
  </div>
 
- <!-- ПРАВЫЙ ГРАФИК (ИСПРАВЛЕНЫ ССЫЛКИ И ОТРЕНДЕРЕНА КРИВАЯ) -->
- <div class="chart-box" style="cursor: pointer;" onclick="openModal('graph2')">
+ <!-- ПРАВЫЙ ГРАФИК -->
+ <div class="chart-box" onclick="openModal('graph2')">
  <div class="chart-title">Equation 2: Internal Tension vs. Frequency</div>
  <div class="svg-container">
- <svg id="graph2" viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://w3.org">
- <rect width="500" height="350" fill="#0f0f11"/>
- <line x1="60" y1="30" x2="60" y2="300" stroke="#222222" stroke-width="2"/>
+ <svg id="graph2" viewBox="0 0 500 350" width="100%" height="100%">
