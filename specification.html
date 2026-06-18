@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cybernetic Loop Specifications | HFND</title>
+ <style>
+ :root { 
+    --bg: #0a0a0a; 
+    --text: #f5f5f7; 
+    --accent: #2997ff; 
+    --gray: #86868b; 
+    --card-bg: #121212; 
+    --blue-accent: #2997ff;
+    --orange-accent: #ff9500;
+    --red-accent: #ff3b30;
+    --green-accent: #34c759;
+ }
+ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+ .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+ header { padding: 40px 0 20px 0; border-bottom: 1px solid #222; margin-bottom: 30px; }
+ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px 0; }
+ .back-btn { display: inline-block; color: var(--accent); text-decoration: none; font-size: 16px; margin-bottom: 20px; font-weight: 500; }
+ .back-btn:hover { text-decoration: underline; }
+
+ /* Стили таблицы-схемы (Увеличенные шрифты) */
+ .framework-container { background-color: #0f0f11; border-radius: 14px; padding: 35px; margin-bottom: 40px; border: 1px solid #222; }
+ .framework-main-title { color: var(--blue-accent); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 12px; }
+ .framework-layer-title { color: var(--gray); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin: 35px 0 20px 0; }
+ .framework-layer-title:first-of-type { margin-top: 0; }
+ .framework-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+ .framework-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+ .framework-card { background-color: var(--card-bg); border-radius: 8px; padding: 24px; border-left: 4px solid transparent; }
+ .framework-card.blue { border-left-color: var(--blue-accent); }
+ .framework-card.orange { border-left-color: var(--orange-accent); }
+ .framework-card.red { border-left-color: var(--red-accent); }
+ .framework-card.green { border-left-color: var(--green-accent); }
+ .framework-card-title { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+ .framework-card.blue .framework-card-title { color: var(--blue-accent); }
+ .framework-card.orange .framework-card-title { color: var(--orange-accent); }
+ .framework-card.red .framework-card-title { color: var(--red-accent); }
+ .framework-card.green .framework-card-title { color: var(--green-accent); }
+ .framework-card-text { color: #e8e8ed; font-size: 15px; line-height: 1.5; }
+
+ /* Стили секции графиков */
+ .charts-section-title { font-size: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; color: #fff; text-align: center; }
+ .charts-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-top: 20px; }
+ .chart-box { background-color: #0f0f11; border: 1px solid #222; border-radius: 14px; padding: 25px; display: flex; flex-direction: column; align-items: center; }
+ .chart-title { font-size: 15px; font-weight: 500; color: #e8e8ed; margin-bottom: 15px; width: 100%; text-align: center; }
+ .svg-container { width: 100%; max-width: 450px; height: auto; }
+ 
+ @media (max-width: 600px) {
+    .framework-grid-3, .framework-grid-2, .charts-wrapper { grid-template-columns: 1fr; }
+    .charts-wrapper { min-width: 100%; }
+ }
+ </style>
+</head>
+<body>
+<div class="container">
+ <a href="manifesto.html" class="back-btn">&larr; Back to Scientific Manifesto</a>
+ 
+ <header>
+ <h1>HFND Cybernetic Loop: Specifications & Math Models</h1>
+ </header>
+
+ <!-- ТАБЛИЦА СХЕМЫ -->
+ <div class="framework-container">
+    <div class="framework-main-title">HFND END-TO-END CYBERNETIC LOOP SPECIFICATION (HARDWARE --&gt; CELLULAR CORE)</div>
+
+    <div class="framework-layer-title">EXTERNAL & HARDWARE CONTROL LAYERS</div>
+    <div class="framework-grid-3">
+        <div class="framework-card blue">
+            <div class="framework-card-title">1. AVSS Hardware Platform</div>
+            <div class="framework-card-text">Wearable Cybernetic Devices: Daily Vest Core or Active Band form factors embedded with 24-bit ADCs and FIFO buffers.</div>
+        </div>
+        <div class="framework-card blue">
+            <div class="framework-card-title">2. Vestibular Stochastic Resonance</div>
+            <div class="framework-card-text">Sub-threshold white noise propagation via axonal interface at 120 m/s to force-synchronize afferent systems.</div>
+        </div>
+        <div class="framework-card blue">
+            <div class="framework-card-title">3. Collective Purkinje Cells</div>
+            <div class="framework-card-text">Phase-locking summation inside the cerebellar cortex triggering coherent 400–1000 Hz efferent spike generation.</div>
+        </div>
+    </div>
+
+    <div class="framework-layer-title">INTRACELLULAR MOLECULAR & THERMODYNAMIC LAYERS</div>
+    <div class="framework-grid-3">
+        <div class="framework-card orange">
+            <div class="framework-card-title">4. Mechanotransduction</div>
+            <div class="framework-card-text">High-frequency muscle micro-tetanus. Integral power of signal replaces the requirement for external mechanical mass.</div>
+        </div>
+        <div class="framework-card orange">
+            <div class="framework-card-title">5. Mechanical mTORC1 Lock</div>
+            <div class="framework-card-text">Continuous down-stream activation forced into an unconditional "ON" state via intensive membrane deformation.</div>
+        </div>
+        <div class="framework-card orange">
+            <div class="framework-card-title">6. Selective Macroautophagy</div>
+            <div class="framework-card-text">Internal waste degradation (lipofuscin & broken mitochondria) strictly driven by FIFO biochemical recycling protocols.</div>
+        </div>
+    </div>
+
+    <div class="framework-layer-title">THERMODYNAMIC BOUNDARY & FINAL SYSTEM OUTPUT</div>
+    <div class="framework-grid-2">
+        <div class="framework-card red">
+            <div class="framework-card-title">Thermodynamic Boundary Conditions</div>
+            <div class="framework-card-text">External Amino Acid Input = 0 (&lt;45g/day). Chronic nitrogen deficit forces cell to source building blocks entirely from internal recycling.</div>
+        </div>
+        <div class="framework-card green">
+            <div class="framework-card-title">7. Terminal System Output</div>
+            <div class="framework-card-text">Dry Myofibrillar Compaction. Elite Type-II fiber density resynthesis achieved completely without sarcoplasmic water bloating.</div>
+        </div>
+    </div>
+ </div>
+
+ <!-- СЕКЦИЯ МАТЕМАТИЧЕСКИХ ГРАФИКОВ (ПОЛНОРАЗМЕРНЫЕ И С МОДАЛЬНЫМ ОКНОМ) -->
+ <div class="charts-section-title" style="margin-top: 50px; font-size: 24px; color: var(--accent); text-align: center;">Mathematical Specifications (AVSS Architecture)</div>
+ <p style="text-align: center; color: var(--gray); font-size: 15px; margin-bottom: 30px;">💡 Click on any chart to expand to full screen</p>
+ 
+ <div class="charts-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px;">
+    
+    <!-- ГРАФИК 1 (КЛИКАБЕЛЬНЫЙ ИСПРАВЛЕННЫЙ) -->
+    <div class="chart-box" style="cursor: pointer; background-color: #0f0f11; border: 1px solid #222; border-radius: 14px; padding: 25px; display: flex; flex-direction: column; align-items: center;" onclick="openModal('svg-chart-1')">
+        <div class="chart-title" style="font-size: 16px; margin-bottom: 15px; color: #fff; text-align: center; width: 100%;">Equation 1: CNS Response Latency vs. Frequency</div>
+        <div class="svg-container" id="svg-chart-1" style="width: 100%;">
+            <svg viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://w3.org" style="background-color: #0f0f11 !important; display: block !important;">
+                <rect width="500" height="350" fill="#0f0f11"/>
+                <line x1="60" y1="30" x2="60" y2="300" stroke="#222222" stroke-width="2"/>
+                <line x1="60" y1="300" x2="460" y2="300" stroke="#222222" stroke-width="2"/>
+                
+                <line x1="60" y1="250" x2="460" y2="250" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                <line x1="193" y1="30" x2="193" y2="300" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                <line x1="393" y1="30" x2="393" y2="300" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                
+                <text x="260" y="340" fill="#86868b" font-size="11" text-anchor="middle">Cerebellar Core Frequency f (Hz)</text>
+                <text x="20" y="165" fill="#86868b" font-size="11" text-anchor="middle" transform="rotate(-90 20 165)">Response Lag Time (Seconds)</text>
+                
+                <text x="60" y="318" fill="#86868b" font-size="11" text-anchor="middle">0</text>
+                <text x="126" y="318" fill="#86868b" font-size="11" text-anchor="middle">200</text>
+                <text x="193" y="318" fill="#86868b" font-size="11" text-anchor="middle">400</text>
+                <text x="260" y="318" fill="#86868b" font-size="11" text-anchor="middle">600</text>
+                <text x="326" y="318" fill="#86868b" font-size="11" text-anchor="middle">800</text>
+                <text x="393" y="318" fill="#86868b" font-size="11" text-anchor="middle">1000</text>
+                <text x="460" y="318" fill="#86868b" font-size="11" text-anchor="middle">1200</text>
+                
+                <text x="45" y="304" fill="#86868b" font-size="11" text-anchor="end">0</text>
+                <text x="45" y="254" fill="#86868b" font-size="11" text-anchor="end">1</text>
+                <text x="45" y="204" fill="#86868b" font-size="11" text-anchor="end">2</text>
+                <text x="45" y="154" fill="#86868b" font-size="11" text-anchor="end">3</text>
+                <text x="45" y="104" fill="#86868b" font-size="11" text-anchor="end">4</text>
+                <text x="45" y="54" fill="#86868b" font-size="11" text-anchor="end">5</text>
+
+                <line x1="60" y1="250" x2="460" y2="250" stroke="#86868b" stroke-width="1.5" stroke-dasharray="5,5"/>
+                <path d="M 193 250 Q 293 300 393 250 Z" fill="#ff3b30" fill-opacity="0.15"/>
+                <path d="M 60 75 L 193 75 L 193 250 Q 293 300 393 250 L 393 75 L 460 75" fill="none" stroke="#ff3b30" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <rect x="250" y="45" width="190" height="45" fill="#121212" rx="4" opacity="0.9"/>
+                <line x1="260" y1="57" x2="280" y2="57" stroke="#ff3b30" stroke-width="3"/>
+                <text x="288" y="61" fill="#fff" font-size="10">τ_control = τ_0 / (1 + VSR(f))</text>
+                <line x1="260" y1="77" x2="280" y2="77" stroke="#86868b" stroke-width="1.5" stroke-dasharray="3,3"/>
+                <text x="288" y="81" fill="#86868b" font-size="10">Target Threshold (1.0 s)</text>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ГРАФИК 2 (КЛИКАБЕЛЬНЫЙ + СКОРРЕКТИРОВАН ПИК ДО 96-98) -->
+    <div class="chart-box" style="cursor: pointer; background-color: #0f0f11; border: 1px solid #222; border-radius: 14px; padding: 25px; display: flex; flex-direction: column; align-items: center;" onclick="openModal('svg-chart-2')">
+        <div class="chart-title" style="font-size: 16px; margin-bottom: 15px; color: #fff; text-align: center; width: 100%;">Equation 2: Internal Tension vs. Frequency</div>
+        <div class="svg-container" id="svg-chart-2" style="width: 100%;">
+            <svg viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://w3.org" style="background-color: #0f0f11 !important; display: block !important;">
+                <rect width="500" height="350" fill="#0f0f11"/>
+                <line x1="60" y1="30" x2="60" y2="300" stroke="#222222" stroke-width="2"/>
+                <line x1="60" y1="300" x2="460" y2="300" stroke="#222222" stroke-width="2"/>
+                
+                <line x1="60" y1="144" x2="460" y2="144" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                <line x1="193" y1="30" x2="193" y2="300" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+                <line x1="393" y1="30" x2="393" y2="300" stroke="#1c1c1e" stroke-dasharray="3,3"/>
+
+                <text x="260" y="340" fill="#86868b" font-size="11" text-anchor="middle">Cerebellar Core Frequency f (Hz)</text>
+                <text x="20" y="165" fill="#86868b" font-size="11" text-anchor="middle" transform="rotate(-90 20 165)">Internal Fiber Tension (Normalized Units)</text>
+
+                <text x="60" y="318" fill="#86868b" font-size="11" text-anchor="middle">0</text>
+                <text x="126" y="318" fill="#86868b" font-size="11" text-anchor="middle">200</text>
+                <text x="193" y="318" fill="#86868b" font-size="11" text-anchor="middle">400</text>
+                <text x="260" y="318" fill="#86868b" font-size="11" text-anchor="middle">600</text>
+                <text x="326" y="318" fill="#86868b" font-size="11" text-anchor="middle">800</text>
+                <text x="393" y="318" fill="#86868b" font-size="11" text-anchor="middle">1000</text>
+                <text x="460" y="318" fill="#86868b" font-size="11" text-anchor="middle">1200</text>
+
+                <text x="45" y="304" fill="#86868b" font-size="11" text-anchor="end">0</text>
+                <text x="45" y="258" fill="#86868b" font-size="11" text-anchor="end">20</text>
+                <text x="45" y="217" fill="#86868b" font-size="11" text-anchor="end">40</text>
+                <text x="45" y="175" fill="#86868b" font-size="11" text-anchor="end">60</text>
+                <text x="45" y="133" fill="#86868b" font-size="11" text-anchor="end">80</text>
+                <text x="45" y="92" fill="#86868b" font-size="11" text-anchor="end">100</text>
+                <text x="45" y="50" fill="#86868b" font-size="11" text-anchor="end">120</text>
+
+                <!-- Горизонтальный белый пунктир mTORC1 Порог на уровне 75 -->
+                <line x1="60" y1="144" x2="460" y2="144" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+                <!-- Бирюзовая область интеграла (Заливка под кривой, скорректированная под пик 96) -->
+                <path d="M 193 290 L 193 258 Q 260 120 393 100 L 393 290 Z" fill="#00f5d4" fill-opacity="0.08"/>
+
+                <!-- ИСПРАВЛЕННАЯ КРИВАЯ: Пик на уровне 96 (высота по Y = 100), правый хвост на базовом уровне (290) -->
+                <path d="M 60 290 L 193 290 L 193 258 Q 260 120 393 100 L 393 290 L 460 290" fill="none" stroke="#00f5d4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <rect x="210" y="235" width="240" height="45" fill="#121212" rx="4" opacity="0.9"/>
+                <line x1="220" y1="247" x2="240" y2="247" stroke="#00f5d4" stroke-width="3"/>
+                <text x="248" y="251" fill="#fff" font-size="10">F_internal (Neural Drive Only, M_ext = 0)</text>
+                <line x1="220" y1="267" x2="240" y2="267" stroke="#fff" stroke-width="1.5" stroke-dasharray="3,3"/>
+                <text x="248" y="271" fill="#86868b" font-size="10">mTORC1 Threshold (F_threshold)</text>
+            </svg>
+        </div>
+    </div>
+ </div>
+
+ <!-- HTML-КОД МОДАЛЬНОГО ОКНА ДЛЯ ПРОСМОТРА ВО ВЕСЬ ЭКРАН -->
+ <div id="chartModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(5, 5, 5, 0.95); z-index: 10000; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;">
+    <div style="position: absolute; top: 20px; right: 30px; color: #fff; font-size: 35px; font-weight: bold; cursor: pointer; user-select: none;" onclick="closeModal()">&times;</div>
+    <div id="modalContent" style="width: 100%; max-width: 900px; height: auto; display: flex; justify-content: center; align-items: center;"></div>
+ </div>
+
+ <!-- КОМПАКТНЫЙ СКРИПТ УПРАВЛЕНИЯ МОДАЛЬНЫМ ОКНОМ -->
+ <script>
+ function openModal(svgContainerId) {
+     var svgHtml = document.getElementById(svgContainerId).innerHTML;
+     document.getElementById('modalContent').innerHTML = svgHtml;
+     document.getElementById('chartModal').style.display = 'flex';
+ }
+ function closeModal() {
+     document.getElementById('chartModal').style.display = 'none';
+     document.getElementById('modalContent').innerHTML = '';
+ }
+ window.addEventListener('keydown', function(e) {
+     if (e.key === 'Escape') closeModal();
+ });
+ </script>
