@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HFND Technologies | High-Frequency Neural Drive</title>
+ <style>
+ :root { 
+ --bg: #0a0a0a; 
+ --text: #f5f5f7; 
+ --accent: #2997ff; 
+ --gray: #86868b; 
+ --card-bg: #121212;
+ }
+ body { 
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+ background-color: var(--bg); 
+ color: var(--text); 
+ margin: 0; 
+ padding: 0; 
+ line-height: 1.5; 
+ -webkit-font-smoothing: antialiased; 
+ }
+ .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+ header { padding: 60px 0 40px 0; border-bottom: 1px solid #222; }
+ h1 { font-size: 44px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px 0; color: var(--text); }
+ .subtitle { font-size: 21px; color: var(--accent); font-weight: 400; margin: 0 0 20px 0; }
+ .tagline { font-size: 17px; color: var(--gray); max-width: 650px; margin: 0; line-height: 1.6; }
+ section { padding: 40px 0; border-bottom: 1px solid #222; }
+ h2 { font-size: 24px; font-weight: 600; margin: 0 0 25px 0; letter-spacing: -0.3px; }
+ ul { list-style: none; padding: 0; margin: 0; }
+ li { margin-bottom: 15px; font-size: 16px; color: #e8e8ed; line-height: 1.5; }
+ strong { color: var(--text); font-weight: 600; }
+ 
+ .science-intro { font-size: 16px; color: #e8e8ed; margin-bottom: 25px; }
+ .accordion { margin-bottom: 15px; background: var(--card-bg); border: 1px solid #222; border-radius: 8px; overflow: hidden; }
+ .accordion-title { width: 100%; background: none; border: none; color: var(--text); text-align: left; 
+padding: 18px 20px; font-size: 17px; font-weight: 600; cursor: pointer; display: flex; justify-content: 
+space-between; align-items: center; transition: background 0.2s; }
+ .accordion-title:hover { background: #1a1a1a; }
+ .accordion-title::after { content: '+'; color: var(--accent); font-size: 20px; font-weight: 400; }
+ .accordion[open] .accordion-title::after { content: '−'; }
+ .accordion-content { padding: 0 20px 20px 20px; color: #e8e8ed; font-size: 15px; border-top: 1px 
+solid #1a1a1a; padding-top: 15px; }
+ .accordion-content p { margin: 0 0 12px 0; }
+ .accordion-content p:last-child { margin: 0; }
+ 
+ .btn { display: inline-block; background-color: var(--accent); color: #fff; text-decoration: none; 
+padding: 12px 24px; border-radius: 8px; font-weight: 500; font-size: 15px; margin-top: 10px; transition: 
+opacity 0.2s; border: none; cursor: pointer; }
+ .btn:hover { opacity: 0.9; }
+ footer { padding: 40px 0; color: var(--gray); font-size: 14px; }
+ .footer-grid { display: flex; justify-content: space-between; align-items: center; }
+ @media (max-width: 600px) { h1 { font-size: 34px; } .subtitle { font-size: 19px; } .footer-grid { flex-direction: column; align-items: flex-start; gap: 15px; } }
+ </style>
+</head>
+<body>
+<div class="container">
+<header>
+ <h1>HFND Technologies</h1>
+ <div class="subtitle">Closed-Loop Motor Control Architecture</div>
+ <p class="tagline">We develop a hardware-agnostic cybernetic platform and non-invasive commercial silicon operating in the 400–1000 Hz spectrum. Our mission is to eliminate age-related motor lag, prevent catastrophic falls, and bypass classical metabolic muscle decay.</p>
+</header>
+
+<section>
+ <h2>Empirical Case Validation (N=1 Prototyping)</h2>
+ <p class="science-intro">The core neural signal processing pipeline is empirically validated by a living biological prototype (Age 63) demonstrating elite physical matrix retention and sub-second reflexes:</p>
+ <ul>
+ <li><strong>Neuromuscular Integrity:</strong> Verified digital hand grip strength at 63.7 kg (99th percentile of global age-matched norms). Leg Press: 197 kg. Seated Chest Press: 105 kg.</li>
+ <li><strong>Non-Nutritional mTORC1 Leverage:</strong> High-performance muscle mass retention (39 cm bicep) under strict systemic protein constraints (&lt;45g/day) via high-frequency micro-tetanus signaling.</li>
+ <li><strong>Sensory Gating Reset:</strong> Sub-1 second central suppression of post-rotational vestibular nystagmus (AVSS algorithm), enabling immediate complex cross-hemisphere motor execution.</li>
+ </ul>
+ <a href="https://linktr.ee" class="btn" target="_blank">View Live Video Benchmarks</a>
+</section>
+
+<section>
+ <h2>The Biophysical & Hardware Core</h2>
+ <p class="science-intro">HFND replaces heavy, resource-dependent chemical nutrition pathways with instantaneous, high-frequency digital regulation of the central nervous system matrix.</p>
+ 
+ <details class="accordion">
+ <summary class="accordion-title">1. AVSS Control Loop & Eliminating "Neuro-Quantum Lag"</summary>
+ <div class="accordion-content">
+ <p>Aging induces electrochemical desynchronization at the neuromuscular junction, generating a micro-delay ("Neuro-Quantum Lag") filled with disruptive synaptic noise. This triggers central inhibition, blocking high-frequency currents and causing muscle atrophy and fall risks.</p>
+ <p>The proprietary <strong>AVSS Algorithm</strong> utilizes Vestibular Stochastic Resonance (VSR) to compress cerebellar latency to a sub-second level, bypassing the synaptic bottleneck and restoring immediate motor recruitment.</p>
+ </div>
+ </details>
+
+ <details class="accordion">
+ <summary class="accordion-title">2. Bypassing Biological Bottlenecks via Population Phase-Locking</summary>
+ <div class="accordion-content">
+ <p>The absolute refractory period restricts individual axons to firing rates under 150 Hz. The HFND platform overcomes this biological ceiling through high-density spatial-temporal synchronization across distributed neural networks.</p>
+ <p>By orchestrating a coherent, phased-array firing matrix across cerebellar Purkinje cell fields, the system achieves a collective operational bandwidth within the <strong>400–1000 Hz spectrum</strong>, effectively drowning out background neural noise.</p>
+ </div>
+ </details>
+ 
+ <details class="accordion">
+ <summary class="accordion-title">3. Neurogenic mTORC1 Activation & FIFO Autophagous Recycling</summary>
+ <div class="accordion-content">
+ <p>Ultra-dense electrical depolarization at 400–1000 Hz forces an inside-out calcium surge in myocytes. This mechanical strain mechanically triggers the <strong>mTORC1 pathway</strong>, synthesizing structural Type II fast-twitch proteins without relying on heavy protein ingestion.</p>
+ <p>Lacking external chemical fueling, the hyperactivated cell executes a strict <strong>First-In, First-Out (FIFO) macroautophagy queue</strong>, converting internal cellular debris and metabolic waste into clean, functional contractive tissue.</p>
+ </div>
+ </details>
+</section>
+
+<section>
+ <h2>Pre-Seed Investment Stage</h2>
+ <p style="color: #e8e8ed; font-size: 16px; margin: 0 0 20px 0;">HFND Technologies is raising <strong>&euro;220,000 in Pre-Seed funding</strong> to transition this validated biological firmware into commercial silicon, target custom hardware form-factors (Smart Eyewear / Vestibular Straps), and prepare for institutional R&D partnership validation.</p>
+ <ul style="color: var(--gray); font-size: 15px;">
+ <li>&bull; <strong>Hardware Core Upgrade:</strong> Deploying High-Density Surface Electromyography (HD-EMG 64/128 channels) and 24-bit ADC arrays to isolate the 1000 Hz Purkinje interference pattern.</li>
+ <li>&bull; <strong>International IP Protection:</strong> Immediate execution of the PCT (Patent Cooperation Treaty) phase to secure core wave-signaling algorithms across US, EU, and Asian markets.</li>
+ <li>&bull; <strong>Corporate Infrastructure:</strong> Incorporation of a Berlin-based GmbH, establishing an agile MedTech development runway, error-tolerance hardware routing iterations, and compliance protocols.</li>
+ </ul>
+</section>
+
+<footer>
+ <div class="footer-grid">
+ <div>
+ <strong>HFND Technologies</strong> — Stealth Stage DeepTech Startup<br>
+ Berlin, Germany (Available for on-site live demonstrations)
+ </div>
+ <div>
+ Contact: <a href="mailto:dmitry@hfnd-neuro.com" style="color: var(--accent); text-decoration: none;">dmitry@hfnd-neuro.com</a>
+ </div>
+ </div>
+</footer>
+</div>
+</body>
+</html>
