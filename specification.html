@@ -22,6 +22,7 @@ header { padding: 40px 0 20px 0; border-bottom: 1px solid #222; margin-bottom: 3
 h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px 0; }
 .back-btn { display: inline-block; color: var(--accent); text-decoration: none; font-size: 16px; margin-bottom: 20px; font-weight: 500; }
 .back-btn:hover { text-decoration: underline; }
+
 .framework-container { background-color: #0f0f11; border-radius: 14px; padding: 35px; margin-bottom: 40px; border: 1px solid #222; }
 .framework-main-title { color: var(--blue-accent); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 12px; }
 .framework-layer-title { color: var(--gray); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin: 35px 0 20px 0; }
@@ -39,14 +40,16 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
 .framework-card.red .framework-card-title { color: var(--red-accent); }
 .framework-card.green .framework-card-title { color: var(--green-accent); }
 .framework-card-text { color: #e8e8ed; font-size: 15px; line-height: 1.5; }
+
 .charts-section-title { font-size: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; color: #fff; text-align: center; }
 .charts-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-top: 20px; }
-.chart-box { background-color: #0f0f11; border: 1px solid #222; border-radius: 14px; padding: 25px; display: flex; flex-direction: column; align-items: center; }
+.chart-box { background-color: #0f0f11; border: 1px solid #222; border-radius: 14px; padding: 25px; display: flex; flex-direction: column; align-items: center; transition: border-color 0.2s; }
+.chart-box:hover { border-color: var(--accent); }
 .chart-title { font-size: 15px; font-weight: 500; color: #e8e8ed; margin-bottom: 15px; width: 100%; text-align: center; }
 .svg-container { width: 100%; max-width: 450px; height: auto; }
+
 @media (max-width: 600px) {
  .framework-grid-3, .framework-grid-2, .charts-wrapper { grid-template-columns: 1fr; }
- .charts-wrapper { min-width: 100%; }
 }
 </style>
 </head>
@@ -56,8 +59,10 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
 <header>
 <h1>HFND Cybernetic Loop: Specifications & Math Models</h1>
 </header>
+
 <div class="framework-container">
  <div class="framework-main-title">HFND END-TO-END CYBERNETIC LOOP SPECIFICATION (HARDWARE --&gt; CELLULAR CORE)</div>
+ 
  <div class="framework-layer-title">EXTERNAL & HARDWARE CONTROL LAYERS</div>
  <div class="framework-grid-3">
  <div class="framework-card blue">
@@ -73,6 +78,7 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
  <div class="framework-card-text">Phase-locking summation inside the cerebellar cortex triggering coherent 400–1000 Hz efferent spike generation.</div>
  </div>
  </div>
+
  <div class="framework-layer-title">INTRACELLULAR MOLECULAR & THERMODYNAMIC LAYERS</div>
  <div class="framework-grid-3">
  <div class="framework-card orange">
@@ -88,6 +94,7 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
  <div class="framework-card-text">Internal waste degradation (lipofuscin & broken mitochondria) strictly driven by FIFO biochemical recycling protocols.</div>
  </div>
  </div>
+
  <div class="framework-layer-title">THERMODYNAMIC BOUNDARY & FINAL SYSTEM OUTPUT</div>
  <div class="framework-grid-2">
  <div class="framework-card red">
@@ -100,13 +107,16 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
  </div>
  </div>
 </div>
-<div class="charts-section-title" style="margin-top: 50px; font-size: 24px; color: var(--accent); text-align: center;">Mathematical Specifications (AVSS Architecture)</div>
+
+<div class="charts-section-title" style="margin-top: 50px; font-size: 24px; color: var(--accent);">Mathematical Specifications (AVSS Architecture)</div>
 <p style="text-align: center; color: var(--gray); font-size: 15px; margin-bottom: 30px;">💡 Click on any chart to expand to full screen</p>
+
 <div class="charts-wrapper">
- <div class="chart-box" style="cursor: pointer;" onclick="openModal('svg-chart-1')">
+ <!-- ЛЕВЫЙ ГРАФИК -->
+ <div class="chart-box" style="cursor: pointer;" onclick="openModal('graph1')">
  <div class="chart-title">Equation 1: CNS Response Latency vs. Frequency</div>
- <div class="svg-container" id="svg-chart-1">
- <svg viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://w3.org">
+ <div class="svg-container">
+ <svg id="graph1" viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://w3.org">
  <rect width="500" height="350" fill="#0f0f11"/>
  <line x1="60" y1="30" x2="60" y2="300" stroke="#222222" stroke-width="2"/>
  <line x1="60" y1="300" x2="460" y2="300" stroke="#222222" stroke-width="2"/>
@@ -132,15 +142,16 @@ h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 10px
  <path d="M 193 250 Q 293 300 393 250 Z" fill="#ff3b30" fill-opacity="0.15"/>
  <path d="M 60 75 L 193 75 L 193 250 Q 293 300 393 250 L 393 75 L 460 75" fill="none" stroke="#ff3b30" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
  <rect x="250" y="45" width="190" height="45" fill="#121212" rx="4" opacity="0.9"/>
- <line x1="260" y1="57" x2="280" y2="57" stroke="#ff3b30" stroke-width="3"/>
- <text x="288" y="61" fill="#fff" font-size="10">τ_control = τ_0 / (1 + VSR(f))</text>
- <line x1="260" y1="77" x2="280" y2="77" stroke="#86868b" stroke-width="1.5" stroke-dasharray="3,3"/>
- <text x="288" y="81" fill="#86868b" font-size="10">Target Threshold (1.0 s)</text>
+ <text x="260" y="62" fill="#fff" font-size="11" font-family="monospace">τ_control = τ_0 / (1+VSR(f))</text>
+ <text x="260" y="80" fill="#86868b" font-size="10">Target Threshold (1.0 s)</text>
  </svg>
  </div>
  </div>
- <div class="chart-box" style="cursor: pointer;" onclick="openModal('svg-chart-2')">
+
+ <!-- ПРАВЫЙ ГРАФИК (ИСПРАВЛЕНЫ ССЫЛКИ И ОТРЕНДЕРЕНА КРИВАЯ) -->
+ <div class="chart-box" style="cursor: pointer;" onclick="openModal('graph2')">
  <div class="chart-title">Equation 2: Internal Tension vs. Frequency</div>
- <div class="svg-container" id="svg-chart-2">
- <svg viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://w3.org">
+ <div class="svg-container">
+ <svg id="graph2" viewBox="0 0 500 350" width="100%" height="100%" xmlns="http://w3.org">
  <rect width="500" height="350" fill="#0f0f11"/>
+ <line x1="60" y1="30" x2="60" y2="300" stroke="#222222" stroke-width="2"/>
